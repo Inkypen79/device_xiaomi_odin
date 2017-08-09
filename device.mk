@@ -23,6 +23,10 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# AID/fs configs
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
