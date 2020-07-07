@@ -1,0 +1,8 @@
+ on boot 
+    chown system system /sys/class/qcom-battery/reverse_chg_mode
+    chmod 0644 /sys/class/qcom-battery/reverse_chg_mode
+
+service powershare-hal-1-0 /vendor/bin/hw/vendor.lineage.powershare@1.0-service.odin
+    class hal
+    user system
+    group system
