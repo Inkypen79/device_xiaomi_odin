@@ -150,6 +150,13 @@ persist.sys.fuse.passthrough.enable=true
 # nokia audio room for vts
 #persist.vendor.audio.ozo.codec.enable=true
 
+# Display
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.has_HDR_display=true
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.max_virtual_display_dimension=4096
+
 # Fingerprint
 persist.vendor.fingerprint.type=udfps_optical
 persist.vendor.fingerprint.sensor_location=540|1800|100
