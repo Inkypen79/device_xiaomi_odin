@@ -131,8 +131,8 @@ persist.vendor.radio.atfwd.start=true
 ro.kernel.qemu.gles=0
 qemu.hw.mainkeys=0
 
-#Expose aux camera for below packages
-vendor.camera.aux.packagelist=org.codeaurora.snapcam
+#Expose aux camera for all packages
+persist.vendor.camera.expose.aux=1
 
 #enable IZat OptInApp overlay
 persist.vendor.overlay.izat.optin=rro
