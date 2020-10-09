@@ -5,9 +5,11 @@
  */
 
 #include <libinit_dalvik_heap.h>
+#include <libinit_snet_props.h>
 
 #include "vendor_init.h"
 
 void vendor_load_properties() {
     set_dalvik_heap();
+    workaround_snet_properties();
 }
