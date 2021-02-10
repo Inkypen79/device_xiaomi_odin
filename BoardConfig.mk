@@ -130,7 +130,6 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest_vendor.xiaomi.hardware.mtd
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest_vendor.xiaomi.hardware.otrpagent.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest_vendor.xiaomi.hardware.tidaservice.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest_vendor.xiaomi.hardware.vsimapp.xml
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/power.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/vendor.fs.fsalsps@1.0-service.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/vendor.qti.diag.hal.service.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/vendor.qti.gnss@4.0-service.xml
