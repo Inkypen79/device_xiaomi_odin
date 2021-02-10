@@ -163,6 +163,29 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.mapper@2.0.vendor
+
+PRODUCT_PACKAGES += \
+    vendor.display.config@1.15.vendor \
+    vendor.display.config@2.0.vendor
+
+PRODUCT_PACKAGES += \
+    gralloc.default \
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
+    libmemutils \
+    libqdMetaData \
+    libtinyxml \
+    memtrack.default
+
 # Exclude sensor from InputManager
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml \
