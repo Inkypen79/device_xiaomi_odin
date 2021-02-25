@@ -111,9 +111,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti.recovery \
     android.hardware.boot@1.2-service
 
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
-
 # Camera
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 
@@ -451,9 +448,6 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
 
 # USB
 PRODUCT_SOONG_NAMESPACES += \
