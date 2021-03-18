@@ -2,6 +2,8 @@ type hal_mtdservice_default, domain;
 type hal_mtdservice_default_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(hal_mtdservice_default)
 
+dontaudit hal_mtdservice_default self:capability { dac_override dac_read_search };
+
 allow hal_mtdservice_default file_contexts_file:file { getattr open read };
 allow hal_mtdservice_default hal_mtdservice_hwservice:hwservice_manager { add find };
 allow hal_mtdservice_default hidl_base_hwservice:hwservice_manager add;
