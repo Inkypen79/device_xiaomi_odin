@@ -150,7 +150,7 @@ public class DozeSettingsFragment extends PreferenceFragment
         mPickUpPreference.setEnabled(isChecked);
     }
 
-    private static class HelpDialogFragment extends DialogFragment {
+    public static class HelpDialogFragment extends DialogFragment {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             return new AlertDialog.Builder(getActivity())
