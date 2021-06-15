@@ -65,6 +65,13 @@
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.cld@1\.0-service                    u:object_r:hal_health_storage_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.dtool@1\.0-service                  u:object_r:vendor_dtool_exec:s0
 
+# I/O
+/sys/block/dm-[a-z0-9]+/queue/read_ahead_kb                                  u:object_r:vendor_sysfs_mmc_host:s0
+/sys/block/mmcblk0/bdi/read_ahead_kb                                         u:object_r:vendor_sysfs_mmc_host:s0
+/sys/block/mmcblk0rpmb/bdi/read_ahead_kb                                     u:object_r:vendor_sysfs_mmc_host:s0
+/sys/devices(/.*)?/block/(dm-|mmcblk|sd)[a-z0-9]+/queue/read_ahead_kb        u:object_r:vendor_sysfs_mmc_host:s0
+/sys/devices/virtual/block/dm-[a-z0-9]+/queue/read_ahead_kb                  u:object_r:vendor_sysfs_mmc_host:s0
+
 # Media
 /vendor/bin/hw/dolbycodec2                                                   u:object_r:mediacodec_exec:s0
 /vendor/bin/hw/vendor\.ozoaudio\.media\.c2@1\.0-service                      u:object_r:mediacodec_exec:s0
