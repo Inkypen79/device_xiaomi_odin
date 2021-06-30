@@ -578,7 +578,8 @@ persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.demo.hdmirotationlock=false
 persist.sys.sf.color_saturation=1.0
-persist.sys.sf.color_mode=0
+persist.sys.sf.color_mode=9
+persist.sys.sf.native_mode=2
 debug.sf.hw=0
 debug.egl.hw=0
 debug.sf.latch_unsignaled=1
@@ -768,8 +769,11 @@ persist.vendor.recovery_update=false
 ro.surface_flinger.set_display_power_timer_ms=1000
 ro.surface_flinger.set_idle_timer_ms=80
 ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
 vendor.display.idle_time=1100
+vendor.display.qdcm.disable_factory_mode=1
+vendor.display.qdcm.mode_combine=1
 
 # Silence minksocket logs
 persist.log.tag.minksocket=S

@@ -214,6 +214,8 @@ $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,fal
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay-service.sdm
 
+$(call soong_config_set_bool,livedisplay_sdm,enable_dm,false)
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail_vendor \
