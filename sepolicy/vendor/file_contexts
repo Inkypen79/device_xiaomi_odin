@@ -12,6 +12,9 @@
 /dev/ir_spi                                                 u:object_r:vendor_ir_spi_device:s0
 /dev/elliptic(.*)?                                          u:object_r:sound_device:s0
 
+# Display
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/doze_mode                                                                     u:object_r:sysfs_doze:s0
+
 # EFS
 /dev/block/sde[0-9]                                         u:object_r:efs_block_device:s0
 
