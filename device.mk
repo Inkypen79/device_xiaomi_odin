@@ -157,6 +157,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    CutoutRingServiceOdin \
     libcamera2ndk_vendor \
     libgui_vendor \
     Snap
