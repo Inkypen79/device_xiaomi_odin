@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 The Linux Foundation
+     SPDX-License-Identifier: BSD-3-Clause
+-->
+<resources>
+
+    <!-- WiFi driver supports Beacon Protection for SoftAP. -->
+    <bool name="config_vendor_softap_beacon_protection_supported">true</bool>
+
+    <!-- WiFi driver supports OCV for SoftAP. -->
+    <bool name="config_vendor_softap_ocv_supported">true</bool>
+
+    <!-- Boolean indicating performing a partial initial scan is enabled. -->
+    <bool name="config_wifiEnablePartialInitialScan">true</bool>
+
+    <!-- WiFi driver supports IEEE80211AX single user beamformee for SoftAP. -->
+    <bool name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
+
+    <!-- WiFi driver supports IEEE80211AX single user beamformer for SoftAP. -->
+    <bool name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
+
+    <!-- WiFi driver supports IEEE80211AX for SoftAP. -->
+    <bool name="config_wifiSoftapIeee80211axSupported">true</bool>
+
+    <!-- Boolean indicating enable or disable quick connect. -->
+    <bool name="config_wifi_framework_enable_quick_connect">true</bool>
+
+    <!-- Integer for WiFi Partial scan results fetching period (in ms). -->
+    <integer name="config_wifi_partial_scan_results_fetching_period_ms">1000</integer>
+
+</resources>
