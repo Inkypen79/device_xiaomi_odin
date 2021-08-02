@@ -1156,15 +1156,6 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 vendor/lib64/vendor.qti.latency@2.1.so
 
-# Lights
-vendor/bin/hw/android.hardware.lights-service.qti
-vendor/etc/init/android.hardware.lights-qti.rc
--vendor/etc/vintf/manifest/android.hardware.lights-qti.xml
-vendor/lib/hw/lights.default.so
-vendor/lib/hw/lights.qcom.so
-vendor/lib64/hw/lights.default.so
-vendor/lib64/hw/lights.qcom.so
-
 # Listen
 vendor/lib/hw/sound_trigger.primary.lahaina.so
 vendor/lib/libadpcmdec.so
