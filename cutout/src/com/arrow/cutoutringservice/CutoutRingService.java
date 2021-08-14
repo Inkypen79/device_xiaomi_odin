@@ -62,8 +62,6 @@ public class CutoutRingService extends BroadcastReceiver {
     private static final int SHOWN_SMALL = 1;
     private static final int SHOWN = 2;
 
-    private static final float SCALE_CAMERA_INACTIVE = 0.8f;
-
     private final WindowManager.LayoutParams mRingParams = new WindowManager.LayoutParams(
             WindowManager.LayoutParams.TYPE_SECURE_SYSTEM_OVERLAY,
             WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
@@ -215,7 +213,7 @@ public class CutoutRingService extends BroadcastReceiver {
                 mRingView.setVisibility(INVISIBLE);
                 break;
             case SHOWN_SMALL:
-                scale = SCALE_CAMERA_INACTIVE;
+                scale = 0.0f;
                 break;
             case SHOWN:
                 scale = 1.0f;
