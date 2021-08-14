@@ -11,3 +11,13 @@ cc_library_static {
     include_dirs: ["system/core/init"],
     recovery_available: true,
 }
+
+cc_library_static {
+    name: "libinit_odin",
+    srcs: [
+        "libinit_dalvik_heap.cpp",
+        "libinit_utils.cpp",
+    ],
+    export_include_dirs: ["include"],
+    recovery_available: true,
+}
