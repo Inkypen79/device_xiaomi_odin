@@ -31,7 +31,7 @@
 
 # Fingerprint
 /vendor/bin/hw/mfp-daemon                                                                                                   u:object_r:hal_fingerprint_default_exec:s0
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service                                                      u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.odin                                                u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1\.0-service\.odin                                        u:object_r:hal_lineage_fod_odin_exec:s0
 
 # Fingerprint data
