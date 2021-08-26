@@ -26,6 +26,10 @@ type hal_uwb_hwservice, hwservice_manager_type;
 
 type hal_vsimapp_hwservice, hwservice_manager_type;
 
+type nxpese_hwservice, hwservice_manager_type;
+
+type nxpnfc_hwservice, hwservice_manager_type;
+
 type vendor_hal_cameraperf_hwservice, hwservice_manager_type;
 
 type vendor_hal_camerapostproc_xiaomi_hwservice, hwservice_manager_type;
