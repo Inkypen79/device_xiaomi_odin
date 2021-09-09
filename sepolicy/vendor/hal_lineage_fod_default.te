@@ -1,0 +1,7 @@
+type vendor_sysfs_fod, sysfs_type, fs_type;
+
+allow hal_lineage_fod_default vendor_sysfs_fod:file rw_file_perms;
+allow hal_lineage_fod_default vendor_sysfs_graphics:dir r_dir_perms;
+allow hal_lineage_fod_default vendor_sysfs_graphics:file rw_file_perms;
+
+binder_call(hal_lineage_fod_default, hal_fingerprint_default)

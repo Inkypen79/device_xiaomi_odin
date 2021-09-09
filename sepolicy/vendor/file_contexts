@@ -28,6 +28,11 @@
 /mnt/vendor/persist/fpc(/.*)?                               u:object_r:vendor_fingerprint_data_file:s0
 /mnt/vendor/persist/goodix(/.*)?                            u:object_r:vendor_fingerprint_data_file:s0
 
+# FOD
+/vendor/bin/hw/vendor\.lineage\.biometrics\.fingerprint\.inscreen@1\.0-service\.odin                                                 u:object_r:hal_lineage_fod_default_exec:s0
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm                                                                       u:object_r:vendor_sysfs_fod:s0
+/sys/devices/virtual/touch/tp_dev/fod_status                                                                                         u:object_r:vendor_sysfs_fod:s0
+
 # Graphics nodes
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/disp_param                                     u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/hbm_status                                     u:object_r:vendor_sysfs_graphics:s0
