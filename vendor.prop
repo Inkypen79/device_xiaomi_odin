@@ -725,6 +725,7 @@ sys.haptic.scroll.edge=7,0
 sys.haptic.trigger.drawer=2,0
 sys.haptic.hold=4,0
 sys.haptic.runin=13
+sys.usb.mtp.batchcancel=1
 ro.hardware.fp.fod=true
 persist.vendor.sys.fp.fod.location.X_Y=438,1701
 persist.vendor.sys.fp.fod.size.width_height=202,202
