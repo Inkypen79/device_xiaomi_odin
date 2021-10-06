@@ -230,6 +230,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.3-service.odin \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.odin \
     vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
 
