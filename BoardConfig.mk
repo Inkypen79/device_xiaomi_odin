@@ -70,6 +70,9 @@ AB_OTA_PARTITIONS += \
     vendor \
     vendor_boot
 
+# ANT+
+BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := odin
 TARGET_NO_BOOTLOADER := true
