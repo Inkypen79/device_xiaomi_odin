@@ -26,15 +26,12 @@
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
-    <uses-sdk
-        android:minSdkVersion="24"
-        android:targetSdkVersion="24"/>
-
     <application
         android:label="@string/device_settings_app_name"
         android:persistent="true">
 
-        <receiver android:name=".BootCompletedReceiver">
+        <receiver android:name=".BootCompletedReceiver"
+                  android:exported="true">
             <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -42,11 +39,13 @@
         </receiver>
 
         <service android:name=".doze.DozeService"
+                 android:exported="true"
                  android:permission="XiaomiDozeService">
         </service>
 
         <service
             android:name=".display.DcDimmingTileService"
+            android:exported="true"
             android:icon="@drawable/ic_dc_tile"
             android:label="@string/dc_dimming_enable_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -58,6 +57,7 @@
 
         <activity
             android:name=".doze.DozeSettingsActivity"
+            android:exported="true"
             android:label="@string/ambient_display_title"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
@@ -70,6 +70,7 @@
 
         <activity
             android:name=".display.DcDimmingSettingsActivity"
+            android:exported="true"
             android:label="@string/dc_dimming_enable_title"
             android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
