@@ -1,16 +1,12 @@
 # Bluetooth
-#persist.vendor.bluetooth.a2dp.              u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.btstack.                     u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.bt.                          u:object_r:vendor_bluetooth_prop:s0
 vendor.bluetooth.wdsdaemon.enabled          u:object_r:vendor_cit_bluetooth_sub_prop:s0
 vendor.bluetooth.startwdsdaemon             u:object_r:vendor_cit_bluetooth_sub_prop:s0
 
 # Camera
-camera.                                     u:object_r:vendor_camera_prop:s0
 persist.camera.                             u:object_r:vendor_camera_prop:s0
-ro.camera.res.fmq.size                      u:object_r:vendor_camera_prop:s0
 ro.vendor.camera.                           u:object_r:vendor_camera_prop:s0
-ro.camera.                                  u:object_r:vendor_camera_prop:s0
 vendor.camera.sensor.                       u:object_r:vendor_camera_sensor_prop:s0
 vendor.camera.boot_complete                 u:object_r:vendor_camera_prop:s0
 
@@ -37,14 +33,8 @@ ro.boot.cpuid                               u:object_r:vendor_payment_security_p
 vendor.sys.feature_state                    u:object_r:vendor_payment_security_prop:s0
 vendor.sys.rpmb_state                       u:object_r:vendor_payment_security_prop:s0
 
-# Sensors
-invn.hal.                                   u:object_r:vendor_sensors_prop:s0
-persist.sensor.sardisable                   u:object_r:vendor_sensors_prop:s0
-
 # Thermal
-sys.thermal.                                u:object_r:vendor_thermal_normal_prop:s0
 vendor.sys.thermal.                         u:object_r:vendor_thermal_normal_prop:s0
-persist.sys.thermal.config                  u:object_r:vendor_thermal_normal_prop:s0
 
 # UWB
 persist.vendor.uwb.calibration              u:object_r:vendor_uwb_prop:s0
