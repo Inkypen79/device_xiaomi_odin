@@ -347,20 +347,13 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc_snxxx@1.2-service \
+    android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
-    com.nxp.nfc.nq \
     libchrome.vendor \
-    libnqnfc_nci_jni \
-    nfc_nci.nqx.default.hw \
-    NQNfcNci \
+    NfcNci \
     SecureElement \
-    Tag \
-    vendor.nxp.hardware.nfc@2.0-service
-
-PRODUCT_PACKAGES += \
-    jcos_nq_client \
-    ls_nq_client \
-    se_nq_extn_client
+    Tag
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
@@ -528,7 +521,7 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    vendor/nxp/opensource/sn100x
+    hardware/nxp
 
 # Telephony
 PRODUCT_PACKAGES += \
