@@ -10,6 +10,7 @@ debug.mdpcomp.logs=0
 debug.media.video.chipset=4
 debug.media.video.frc=false
 debug.media.video.vpp=false
+debug.renderengine.backend=threaded
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
