@@ -111,7 +111,6 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # HIDL
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/AHBF@2.1-service.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/fod.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/lineage.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/manifest_lahaina.xml

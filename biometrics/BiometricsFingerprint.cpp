@@ -23,7 +23,50 @@
 #include "BiometricsFingerprint.h"
 
 #include <inttypes.h>
+#include <poll.h>
 #include <unistd.h>
+
+#include <fstream>
+#include <thread>
+
+#define COMMAND_NIT 10
+#define PARAM_NIT_FOD 1
+#define PARAM_NIT_NONE 0
+
+#define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
+#define FOD_STATUS_ON 1
+#define FOD_STATUS_OFF 0
+
+#define FOD_UI_PATH "/sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/fod_ui"
+
+namespace {
+
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
+}
+
+static bool readBool(int fd) {
+    char c;
+    int rc;
+
+    rc = lseek(fd, 0, SEEK_SET);
+    if (rc) {
+        ALOGE("failed to seek fd, err: %d", rc);
+        return false;
+    }
+
+    rc = read(fd, &c, sizeof(char));
+    if (rc != 1) {
+        ALOGE("failed to read bool from fd, err: %d", rc);
+        return false;
+    }
+
+    return c != '0';
+}
+
+} // anonymous namespace
 
 namespace android {
 namespace hardware {
@@ -57,6 +100,30 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
             break;
         }
     }
+
+    std::thread([this]() {
+        int fd = open(FOD_UI_PATH, O_RDONLY);
+        if (fd < 0) {
+            ALOGE("failed to open fd, err: %d", fd);
+            return;
+        }
+
+        struct pollfd fodUiPoll = {
+            .fd = fd,
+            .events = POLLERR | POLLPRI,
+            .revents = 0,
+        };
+
+        while (true) {
+            int rc = poll(&fodUiPoll, 1, -1);
+            if (rc < 0) {
+                ALOGE("failed to poll fd, err: %d", rc);
+                continue;
+            }
+
+            mDevice->extCmd(mDevice, COMMAND_NIT, readBool(fd) ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+        }
+    }).detach();
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
@@ -378,10 +445,12 @@ Return<int32_t> BiometricsFingerprint::extCmd(int32_t cmd, int32_t param) {
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t /*x*/, uint32_t /*y*/,
         float /*minor*/, float /*major*/) {
+    set(FOD_STATUS_PATH, FOD_STATUS_ON);
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
+    set(FOD_STATUS_PATH, FOD_STATUS_OFF);
     return Void();
 }
 

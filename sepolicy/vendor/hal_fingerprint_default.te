@@ -29,6 +29,11 @@ get_prop(system_server, vendor_fp_prop);
 
 set_prop(hal_fingerprint_default, vendor_fp_prop)
 
+allow hal_fingerprint_default vendor_sysfs_fod:file rw_file_perms;
+
+allow hal_fingerprint_default vendor_sysfs_graphics:dir r_dir_perms;
+allow hal_fingerprint_default vendor_sysfs_graphics:file r_file_perms;
+
 allow hal_fingerprint_default vendor_sysfs_spss:dir { search };
 allow hal_fingerprint_default vendor_sysfs_spss:file { open read };
 

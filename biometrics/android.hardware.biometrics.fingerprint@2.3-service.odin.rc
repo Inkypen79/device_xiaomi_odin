@@ -12,6 +12,8 @@ on init
     chown system system /dev/goodix_fp
 
 on boot
+    chown system system /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/fod_ui
+    chown system system /sys/devices/virtual/touch/tp_dev/fod_status
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/irq_enable
     chown system system /sys/bus/platform/devices/soc:fingerprint_fpc/wakeup_enable
