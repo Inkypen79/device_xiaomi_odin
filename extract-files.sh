@@ -75,6 +75,14 @@ function blob_fixup() {
         vendor/lib64/android.hardware.secure_element@1.0-impl.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;
+        vendor/lib64/hw/camera.xiaomi.so)
+            hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/50070094881640F9/1F2003D5881640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
+            mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
+            ;;
+        vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so)
+            hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/7C000094881640F9/1F2003D5881640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
+            mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
+            ;;
     esac
 }
 
