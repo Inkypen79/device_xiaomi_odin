@@ -1,19 +1,19 @@
-type vendor_thermal_normal_prop, property_type;
+vendor_internal_prop(vendor_thermal_normal_prop);
 
-type vendor_camera_sensor_prop, property_type, vendor_property_type;
+vendor_public_prop(vendor_camera_sensor_prop);
 
-type vendor_cct_prop, property_type;
+vendor_internal_prop(vendor_cct_prop);
 
-type vendor_cit_bluetooth_sub_prop, property_type;
+vendor_internal_prop(vendor_cit_bluetooth_sub_prop);
 
-type vendor_cit_wifi_sub_prop, property_type;
+vendor_internal_prop(vendor_cit_wifi_sub_prop);
 
-type vendor_device_prop, property_type;
+vendor_internal_prop(vendor_device_prop);
 
-type vendor_fp_prop, property_type;
+vendor_public_prop(vendor_fp_prop);
 
-type vendor_slad_prop, property_type;
+vendor_internal_prop(vendor_slad_prop);
 
-type vendor_uwb_prop, property_type;
+vendor_internal_prop(vendor_uwb_prop);
 
 vendor_public_prop(vendor_payment_security_prop)
