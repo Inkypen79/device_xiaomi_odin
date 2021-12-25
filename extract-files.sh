@@ -59,6 +59,9 @@ function blob_fixup() {
             sed -i 's/version="2.0"/version="1.0"/g' "${2}"
             sed -i 's/system\/product/system_ext/g' "${2}"
             ;;
+        vendor/etc/camera/pureShot_parameter.xml)
+            sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
+            ;;
         vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml)
             sed -i 's/system/system_ext/g' "${2}"
             ;;
