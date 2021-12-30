@@ -453,8 +453,7 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
     init.qti.ufs.rc \
     init.target.rc \
-    fstab.default \
-    fstab.emmc \
+    fstab.qcom \
     ueventd.qcom.rc \
 
 # RIL
