@@ -1,28 +1,3 @@
-<!--
-    Input:
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        fod_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor.xiaomi.cit.wifi@1.0_compatibility_matrix.xml
-        vendor.xiaomi.cit.bluetooth@1.0_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        vendor_framework_compatibility_matrix.xml
-        dax_framework_compatibility_matrix.xml
--->
 <compatibility-matrix version="2.0" type="framework">
     <hal format="hidl" optional="true">
         <name>android.hardware.automotive.evs</name>
@@ -86,12 +61,11 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>android.hardware.wifi.supplicant</name>
-        <version>1.0-2</version>
+        <name>com.dsi.ant</name>
+        <version>1.0</version>
         <interface>
-            <name>ISupplicant</name>
+            <name>IAnt</name>
             <instance>default</instance>
-            <instance>wigigp2p</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="false">
@@ -194,6 +168,14 @@
         <version>2.0</version>
         <interface>
             <name>IDms</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.fs.fsalsps</name>
+        <version>1.0</version>
+        <interface>
+            <name>IFsAlsps</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -601,6 +583,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.radio.atcmdfwd</name>
+        <version>1.0</version>
+        <interface>
+            <name>IAtCmdFwd</name>
+            <instance>AtCmdFwdService</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
         <version>1.0-7</version>
         <interface>
@@ -967,6 +957,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.hardware.citsensorservice</name>
+        <version>1.1</version>
+        <interface>
+            <name>ICitSensorService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.cld</name>
         <version>1.0</version>
         <interface>
@@ -1126,15 +1124,12 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <sepolicy>
-        <kernel-sepolicy-version>30</kernel-sepolicy-version>
-        <sepolicy-version>26.0</sepolicy-version>
-        <sepolicy-version>27.0</sepolicy-version>
-        <sepolicy-version>28.0</sepolicy-version>
-        <sepolicy-version>29.0</sepolicy-version>
-        <sepolicy-version>30.0</sepolicy-version>
-    </sepolicy>
-    <avb>
-        <vbmeta-version>1.0</vbmeta-version>
-    </avb>
+    <hal format="hidl" optional="true">
+        <name>vendor.xiaomi.uwb</name>
+        <version>1.0</version>
+        <interface>
+            <name>IUwb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
