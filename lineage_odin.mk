@@ -8,11 +8,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from odin device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-PRODUCT_BRAND := xiaomi
+PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := odin
-PRODUCT_MANUFACTURER := xiaomi
+PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_NAME := lineage_odin
-PRODUCT_MODEL := 2106118C
+PRODUCT_MODEL := MIX 4
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
