@@ -200,6 +200,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor
 
 PRODUCT_PACKAGES += \
+    vendor.display.config@1.15 \
     vendor.display.config@1.15.vendor \
     vendor.display.config@2.0.vendor
 
