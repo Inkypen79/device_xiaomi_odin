@@ -463,7 +463,6 @@ PRODUCT_PACKAGES += \
     us_cal.sh \
     vendor_modprobe.sh \
     init.batterysecret.rc \
-    init.mi_thermald.rc \
     init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
