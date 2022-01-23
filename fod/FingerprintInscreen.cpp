@@ -37,15 +37,11 @@
 #define FOD_STATUS_ON 1
 #define FOD_STATUS_OFF 0
 
-#define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui"
+#define FOD_UI_PATH "/sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/fod_ui"
 
-#define FOD_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm"
-#define FOD_HBM_ON 1
-#define FOD_HBM_OFF 0
-
-#define FOD_SENSOR_X 588
-#define FOD_SENSOR_Y 2358
-#define FOD_SENSOR_SIZE 264
+#define FOD_SENSOR_X 436
+#define FOD_SENSOR_Y 1700
+#define FOD_SENSOR_SIZE 198
 
 namespace {
 
@@ -138,7 +134,6 @@ Return<void> FingerprintInscreen::onPress() {
 }
 
 Return<void> FingerprintInscreen::onRelease() {
-    set(FOD_HBM_PATH, FOD_HBM_OFF);
     return Void();
 }
 
