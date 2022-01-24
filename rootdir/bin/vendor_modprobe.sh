@@ -12,13 +12,7 @@ MODULES=`${MODPROBE} -d ${MODULES_PATH} -l`
 
 # Iterate over module list and modprobe them in background.
 for MODULE in ${MODULES}; do
-        if [ ${MODULE} == "qca_cld3_wlan" ]; then
-			echo "Xiaomi Wifi:" ${MODULE}
-        elif [ ${MODULE} == "cnss2" ]; then
-			echo "Xiaomi Wifi:" ${MODULE}
-        else
-		${MODPROBE} -a -b -d ${MODULES_PATH} ${MODULE} &
-        fi
+	${MODPROBE} -a -b -d ${MODULES_PATH} ${MODULE} &
 done
 
 # Wait until all the modprobes are finished
