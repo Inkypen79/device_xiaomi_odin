@@ -1,3 +1,10 @@
+# Bluetooth
+persist.vendor.bluetooth.a2dp.              u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.btstack.                     u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.bt.                          u:object_r:vendor_bluetooth_prop:s0
+vendor.bluetooth.wdsdaemon.enabled          u:object_r:vendor_cit_bluetooth_sub_prop:s0
+vendor.bluetooth.startwdsdaemon             u:object_r:vendor_cit_bluetooth_sub_prop:s0
+
 # Camera
 camera.                                     u:object_r:vendor_camera_prop:s0
 persist.camera.                             u:object_r:vendor_camera_prop:s0
@@ -7,14 +14,28 @@ ro.camera.                                  u:object_r:vendor_camera_prop:s0
 vendor.camera.sensor.                       u:object_r:vendor_camera_sensor_prop:s0
 vendor.camera.boot_complete                 u:object_r:vendor_camera_prop:s0
 
+# cct
+persist.vendor.trigger.cct                  u:object_r:vendor_cct_prop:s0
+
 # Fingerprint
+persist.vendor.fpc.                         u:object_r:vendor_fp_prop:s0
+persist.vendor.goodix.                      u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.                      u:object_r:vendor_fp_prop:s0
 ro.boot.fpsensor                            u:object_r:vendor_fp_prop:s0
 ro.hardware.fp.                             u:object_r:vendor_fp_prop:s0
+vendor.dtool.                               u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.                             u:object_r:vendor_fp_prop:s0
+vendor.panel.display.                       u:object_r:vendor_fp_prop:s0
 
 # Mlipay
+persist.vendor.sys.pay.fido                 u:object_r:vendor_payment_security_prop:s0
 persist.vendor.sys.pay.ifaa                 u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.soter                u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.pay.widevine             u:object_r:vendor_payment_security_prop:s0
+persist.vendor.sys.provision.status         u:object_r:vendor_payment_security_prop:s0
+ro.boot.cpuid                               u:object_r:vendor_payment_security_prop:s0
+vendor.sys.feature_state                    u:object_r:vendor_payment_security_prop:s0
+vendor.sys.rpmb_state                       u:object_r:vendor_payment_security_prop:s0
 
 # Sensors
 invn.hal.                                   u:object_r:vendor_sensors_prop:s0
@@ -24,3 +45,11 @@ persist.sensor.sardisable                   u:object_r:vendor_sensors_prop:s0
 sys.thermal.                                u:object_r:thermal_normal_prop:s0
 vendor.sys.thermal.                         u:object_r:thermal_normal_prop:s0
 persist.sys.thermal.config                  u:object_r:thermal_normal_prop:s0
+
+# UWB
+persist.vendor.uwb.calibration              u:object_r:vendor_uwb_prop:s0
+persist.vendor.uwb.color                    u:object_r:vendor_uwb_prop:s0
+persist.vendor.uwb.pdoa                     u:object_r:vendor_uwb_prop:s0
+persist.vendor.uwb.pdoa-iot                 u:object_r:vendor_uwb_prop:s0
+persist.vendor.uwb.power                    u:object_r:vendor_uwb_prop:s0
+persist.vendor.uwb.tof                      u:object_r:vendor_uwb_prop:s0

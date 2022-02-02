@@ -1,3 +1,35 @@
-type hal_touchfeature_hwservice, hwservice_manager_type;
+type hal_cit_bluetooth_hwservice, hwservice_manager_type;
+
+type hal_cit_wifi_hwservice, hwservice_manager_type;
+
+type hal_fingerprint_hwservice_xiaomi, hwservice_manager_type;
+
+type hal_mfidoca_hwservice, hwservice_manager_type;
+
+type hal_micharge_hwservice, hwservice_manager_type;
+
+type hal_misecurity_hwservice, hwservice_manager_type;
+
+type hal_misys_hwservice, hwservice_manager_type;
 
 type hal_mlipay_hwservice, hwservice_manager_type;
+
+type hal_mtdservice_hwservice, hwservice_manager_type;
+
+type hal_otrpagent_hwservice, hwservice_manager_type;
+
+type hal_slaservice_hwservice, hwservice_manager_type;
+
+type hal_tidaservice_hwservice, hwservice_manager_type;
+
+type hal_uwb_hwservice, hwservice_manager_type;
+
+type hal_vsimapp_hwservice, hwservice_manager_type;
+
+type vendor_hal_cameraperf_hwservice, hwservice_manager_type;
+
+type vendor_hal_camerapostproc_xiaomi_hwservice, hwservice_manager_type;
+
+type vendor_hal_citsensorservice_xiaomi_hwservice, hwservice_manager_type;
+
+type vendor_hal_fsalsps_hwservice, hwservice_manager_type;

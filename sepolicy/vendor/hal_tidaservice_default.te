@@ -1,0 +1,3 @@
+type hal_tidaservice_default, domain;
+type hal_tidaservice_default_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(hal_tidaservice_default)

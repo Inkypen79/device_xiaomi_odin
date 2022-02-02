@@ -1,0 +1,3 @@
+type hal_mtdservice_default, domain;
+type hal_mtdservice_default_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(hal_mtdservice_default)
