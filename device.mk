@@ -441,6 +441,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
+# QTI system helper
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.systemhelper@1.0
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.class_main.sh \
