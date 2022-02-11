@@ -1,0 +1,12 @@
+type hal_lineage_fod_odin, domain;
+hal_server_domain(hal_lineage_fod_odin, hal_lineage_fod)
+type hal_lineage_fod_odin_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_lineage_fod_odin)
+
+allow hal_lineage_fod_odin vendor_sysfs_fod:file rw_file_perms;
+allow hal_lineage_fod_odin vendor_sysfs_graphics:dir r_dir_perms;
+allow hal_lineage_fod_odin vendor_sysfs_graphics:file rw_file_perms;
+
+hal_client_domain(hal_lineage_fod_odin, hal_fingerprint)
+
+binder_call(hal_lineage_fod_odin, hal_fingerprint_default)

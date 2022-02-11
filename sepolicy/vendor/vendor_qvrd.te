@@ -1,0 +1,4 @@
+typeattribute vendor_qvrd system_executes_vendor_violators;
+
+allow vendor_qvrd vendor_firmware_file:dir search;
+allow vendor_qvrd vendor_firmware_file:file { open read };

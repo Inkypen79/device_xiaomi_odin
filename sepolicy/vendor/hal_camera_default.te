@@ -20,3 +20,12 @@ r_dir_file(hal_camera_default, vendor_sysfs_kgsl)
 
 # Allow hal_camera_default to read proc_stat files
 allow hal_camera_default proc_stat:file r_file_perms;
+
+dontaudit hal_camera_default default_prop:file read;
+
+allow hal_camera_default {
+ vendor_hal_cameraperf_hwservice
+ vendor_hal_camerapostproc_xiaomi_hwservice
+}:hwservice_manager { add find };
+
+allow hal_camera_default vendor_xdsp_device:chr_file r_file_perms;

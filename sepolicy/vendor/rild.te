@@ -1,1 +1,6 @@
+dontaudit rild default_prop:file read;
+
 set_prop(rild, deviceid_prop)
+
+allow rild vendor_data_file:dir { add_name write };
+allow rild vendor_data_file:file { create open read write };

@@ -1,3 +1,24 @@
 type vendor_hal_fsalsps_default, domain;
 type vendor_hal_fsalsps_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_hal_fsalsps_default)
+
+hal_client_domain(vendor_hal_fsalsps_default, hal_graphics_allocator)
+
+allow vendor_hal_fsalsps_default fsalsps_data_file:dir search;
+allow vendor_hal_fsalsps_default fsalsps_data_file:file r_file_perms;
+allow vendor_hal_fsalsps_default hal_citsensorservice_xiaomi_default:binder call;
+allow vendor_hal_fsalsps_default hal_graphics_composer_default:binder { call transfer };
+allow vendor_hal_fsalsps_default hal_graphics_mapper_hwservice:hwservice_manager find;
+allow vendor_hal_fsalsps_default hidl_base_hwservice:hwservice_manager add;
+allow vendor_hal_fsalsps_default hwservicemanager:binder { call transfer };
+allow vendor_hal_fsalsps_default hwservicemanager_prop:file { getattr map open read };
+allow vendor_hal_fsalsps_default ion_device:chr_file r_file_perms;
+allow vendor_hal_fsalsps_default mnt_vendor_file:dir search;
+allow vendor_hal_fsalsps_default vendor_hal_citsensorservice_xiaomi_hwservice:hwservice_manager find;
+allow vendor_hal_fsalsps_default vendor_hal_display_config_hwservice:hwservice_manager find;
+allow vendor_hal_fsalsps_default vendor_hal_fsalsps_hwservice:hwservice_manager { add find };
+allow vendor_hal_fsalsps_default vendor_qdisplay_service:service_manager find;
+allow vendor_hal_fsalsps_default vendor_sysfs_graphics:dir search;
+allow vendor_hal_fsalsps_default vendor_sysfs_graphics:file r_file_perms;
+allow vendor_hal_fsalsps_default vndbinder_device:chr_file rw_file_perms;
+allow vendor_hal_fsalsps_default vndservicemanager:binder call;

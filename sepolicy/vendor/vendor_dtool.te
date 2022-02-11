@@ -1,3 +1,8 @@
 type vendor_dtool, domain;
 type vendor_dtool_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(vendor_dtool)
+
+allow vendor_dtool hal_fingerprint_hwservice_xiaomi:hwservice_manager { add find };
+allow vendor_dtool hidl_base_hwservice:hwservice_manager add;
+allow vendor_dtool hwservicemanager:binder { call transfer };
+allow vendor_dtool hwservicemanager_prop:file { getattr map open read };

@@ -35,3 +35,10 @@ allow hal_fingerprint_default vendor_sysfs_spss:file { open read };
 hal_client_domain(hal_fingerprint_default, vendor_hal_perf)
 binder_call(hal_fingerprint_default, vendor_hal_perf_default)
 allow hal_fingerprint_default vendor_hal_perf_hwservice:hwservice_manager find;
+
+dontaudit hal_fingerprint_default default_prop:file read;
+
+allow hal_fingerprint_default vendor_xdsp_device:chr_file r_file_perms;
+
+get_prop(hal_fingerprint_default, vendor_adsprpc_prop)
+get_prop(hal_fingerprint_default, vendor_display_prop)

@@ -1,3 +1,8 @@
 type hal_cit_wifi_default, domain;
 type hal_cit_wifi_default_exec, exec_type, file_type, vendor_file_type;
 init_daemon_domain(hal_cit_wifi_default)
+
+allow hal_cit_wifi_default hal_cit_wifi_hwservice:hwservice_manager { add find };
+allow hal_cit_wifi_default hidl_base_hwservice:hwservice_manager add;
+allow hal_cit_wifi_default hwservicemanager:binder { call transfer };
+allow hal_cit_wifi_default hwservicemanager_prop:file { getattr map open read };

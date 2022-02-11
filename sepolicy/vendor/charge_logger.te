@@ -1,3 +1,13 @@
 type charge_logger, domain;
 type charge_logger_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(charge_logger)
+
+allow charge_logger kmsg_device:chr_file rw_file_perms;
+allow charge_logger self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+allow charge_logger sysfs_wake_lock:file { open write };
+allow charge_logger vendor_charge_log_file:dir w_dir_perms;
+allow charge_logger vendor_charge_log_file:file create_file_perms;
+allow charge_logger vendor_sysfs_battery_supply:dir search;
+allow charge_logger vendor_sysfs_battery_supply:file { getattr open read };
+allow charge_logger vendor_sysfs_usb_supply:dir search;
+allow charge_logger vendor_sysfs_usb_supply:file { getattr open read };
