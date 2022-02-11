@@ -615,6 +615,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
+    vendor.qti.hardware.fstman@1.0.vendor \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
     vendor.qti.hardware.wifi.supplicant@2.2.vendor \
     WifiOverlay \
