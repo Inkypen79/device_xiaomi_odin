@@ -11,6 +11,12 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Inherit from odin device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Gapps
+ifeq ($(WITH_GAPPS), true)
+GAPPS_VARIANT := nano
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+endif
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := odin
 PRODUCT_MANUFACTURER := Xiaomi
