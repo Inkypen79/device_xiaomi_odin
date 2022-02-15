@@ -122,6 +122,9 @@
 # Vibrator
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.odin                u:object_r:hal_vibrator_default_exec:s0
 
+# Wakeup
+/sys/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:sound(/.*)?/wakeup  u:object_r:sysfs_wakeup:s0
+
 # Wireless Charging Supply
 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/wireless                u:object_r:vendor_sysfs_battery_supply:s0
 
