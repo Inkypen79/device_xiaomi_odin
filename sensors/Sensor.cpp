@@ -323,6 +323,18 @@ void SysfsPollingOneShotSensor::interruptPoll() {
     write(mWaitPipeFd[1], &c, sizeof(c));
 }
 
+std::vector<Event> UdfpsSensor::readEvents() {
+    std::vector<Event> events;
+    Event event;
+    event.sensorHandle = mSensorInfo.sensorHandle;
+    event.sensorType = mSensorInfo.type;
+    event.timestamp = ::android::elapsedRealtimeNano();
+    event.u.data[0] = 720;
+    event.u.data[1] = 2490;
+    events.push_back(event);
+    return events;
+}
+
 }  // namespace implementation
 }  // namespace subhal
 }  // namespace V2_1

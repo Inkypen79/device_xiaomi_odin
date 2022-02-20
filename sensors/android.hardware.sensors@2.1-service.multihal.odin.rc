@@ -5,3 +5,7 @@ service vendor.sensors-hal-2-1-multihal /vendor/bin/hw/android.hardware.sensors@
     writepid /dev/cpuset/system-background/tasks
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
+
+on boot
+    # FOD
+    chown system system /sys/devices/virtual/touch/tp_dev/fod_pressed

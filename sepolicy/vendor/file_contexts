@@ -45,6 +45,7 @@
 
 # FOD
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/fod_ui               u:object_r:vendor_sysfs_fod:s0
+/sys/devices/virtual/touch/tp_dev/fod_pressed                                u:object_r:vendor_sysfs_fod:s0
 /sys/devices/virtual/touch/tp_dev/fod_status                                 u:object_r:vendor_sysfs_fod:s0
 
 # Fsalsps
