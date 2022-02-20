@@ -30,7 +30,6 @@
 /dev/block/sde[0-9]                                                          u:object_r:efs_block_device:s0
 
 # Fingerprint
-/vendor/bin/hw/mfp-daemon                                                                                                   u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.odin                                                u:object_r:hal_fingerprint_default_exec:s0
 
 # Fingerprint data
@@ -58,10 +57,9 @@
 /vendor/bin/fidoca                                                           u:object_r:hal_mfidoca_default_exec:s0
 /vendor/bin/misecurityd@1\.0                                                 u:object_r:hal_misecurity_default_exec:s0
 /vendor/bin/mlipayd@1\.1                                                     u:object_r:hal_mlipay_default_exec:s0
-/vendor/bin/mtd@1\.2                                                         u:object_r:hal_mtdservice_default_exec:s0
+/vendor/bin/mtd@1\.3                                                         u:object_r:hal_mtdservice_default_exec:s0
 /vendor/bin/tidad@1.2                                                        u:object_r:hal_tidaservice_default_exec:s0
 /vendor/bin/vsimd                                                            u:object_r:hal_vsimapp_default_exec:s0
-/vendor/bin/hw/android\.hardware\.biometrics\.face@1\.0-service\.faceauth    u:object_r:vendor_biometricsface_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.cld@1\.0-service                    u:object_r:hal_health_storage_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.dtool@1\.0-service                  u:object_r:vendor_dtool_exec:s0
 

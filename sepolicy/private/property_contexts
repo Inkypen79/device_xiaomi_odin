@@ -15,3 +15,9 @@ ro.miui.                        u:object_r:exported_system_prop:s0
 
 #
 sys.panel.                      u:object_r:vendor_display_prop:s0
+
+#
+persist.sensor.                 u:object_r:vendor_sensors_prop:s0
+
+#
+ro.vendor.oem.                  u:object_r:deviceid_prop:s0

@@ -1,5 +1,5 @@
 # Bluetooth
-persist.vendor.bluetooth.a2dp.              u:object_r:vendor_bluetooth_prop:s0
+#persist.vendor.bluetooth.a2dp.              u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.btstack.                     u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.bt.                          u:object_r:vendor_bluetooth_prop:s0
 vendor.bluetooth.wdsdaemon.enabled          u:object_r:vendor_cit_bluetooth_sub_prop:s0
@@ -42,9 +42,9 @@ invn.hal.                                   u:object_r:vendor_sensors_prop:s0
 persist.sensor.sardisable                   u:object_r:vendor_sensors_prop:s0
 
 # Thermal
-sys.thermal.                                u:object_r:thermal_normal_prop:s0
-vendor.sys.thermal.                         u:object_r:thermal_normal_prop:s0
-persist.sys.thermal.config                  u:object_r:thermal_normal_prop:s0
+sys.thermal.                                u:object_r:vendor_thermal_normal_prop:s0
+vendor.sys.thermal.                         u:object_r:vendor_thermal_normal_prop:s0
+persist.sys.thermal.config                  u:object_r:vendor_thermal_normal_prop:s0
 
 # UWB
 persist.vendor.uwb.calibration              u:object_r:vendor_uwb_prop:s0

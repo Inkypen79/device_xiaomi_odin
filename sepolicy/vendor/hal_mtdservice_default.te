@@ -4,6 +4,7 @@ init_daemon_domain(hal_mtdservice_default)
 
 dontaudit hal_mtdservice_default self:capability { dac_override dac_read_search };
 
+allow hal_mtdservice_default block_device:dir search;
 allow hal_mtdservice_default file_contexts_file:file { getattr open read };
 allow hal_mtdservice_default hal_mtdservice_hwservice:hwservice_manager { add find };
 allow hal_mtdservice_default hidl_base_hwservice:hwservice_manager add;
@@ -17,3 +18,4 @@ allow hal_mtdservice_default tee_device:chr_file { ioctl open read write };
 allow hal_mtdservice_default vendor_payment_security_prop:property_service set;
 allow hal_mtdservice_default vendor_persist_data_file:dir { getattr search };
 allow hal_mtdservice_default vendor_qce_device:chr_file { ioctl open read write };
+allow hal_mtdservice_default vendor_sg_device:chr_file { ioctl open read write };
