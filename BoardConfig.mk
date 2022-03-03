@@ -152,6 +152,13 @@ BOARD_KERNEL_CMDLINE += iptable_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
+# Kernel modules
+BOOT_KERNEL_MODULES := \
+    fts_touch_spi.ko \
+    hwid.ko \
+    xiaomi_touch.ko
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
+
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
