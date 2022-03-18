@@ -1,11 +1,9 @@
-
 #
 # from device/xiaomi/missi/system.prop
 #
 #
 # system.prop for missi
 #
-
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 #rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
@@ -21,10 +19,9 @@ ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 # Set network mode to (NR_LTE_TDSCDMA_CDMA_EVDO_GSM_WCDMA, NR_LTE_TDSCDMA_CDMA_EVDO_GSM_WCDMA) for 8+8 mode device on DSDS mode
 ro.telephony.default_network=33,33
-
 dalvik.vm.heapsize=36m
+dalvik.vm.dex2oat64.enabled=true
 dev.pm.dyn_samplingrate=1
-
 #ro.hdmi.enable=true
 #persist.speaker.prot.enable=false
 qcom.hw.aac.encoder=true
@@ -32,7 +29,6 @@ qcom.hw.aac.encoder=true
 # system props for the cne module
 #
 persist.vendor.cne.feature=1
-
 #system props for the MM modules
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
@@ -48,30 +44,30 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 #codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE DSD MOV MHAS
 vendor.mm.enable.qcom_parser=16777215
 persist.mm.enable.prefetch=true
-
-
 #
 # system props for the data modules
 #
 ro.vendor.use_data_netmgrd=true
 persist.vendor.data.mode=concurrent
-
 #system props for time-services
 persist.timed.enable=true
-
+#
+# system prop for opengles version
+#
+# 196608 is decimal for 0x30000 to report version 3
+# 196609 is decimal for 0x30001 to report version 3.1
+# 196610 is decimal for 0x30002 to report version 3.2
+ro.opengles.version=196610
 #
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
 telephony.lteOnCdmaDevice=1
-
 #Simulate sdcard on /data/media
 #
 persist.fuse_sdcard=true
-
 #System props for BT
 ro.bluetooth.library_name=libbluetooth_qti.so
 persist.vendor.btstack.aac_frm_ctl.enabled=true
-
 #system prop for RmNet Data
 persist.rmnet.data.enable=true
 persist.data.wda.enable=true
@@ -82,34 +78,24 @@ persist.data.df.agg.dl_size=4096
 persist.data.df.mux_count=8
 persist.data.df.iwlan_mux=9
 persist.data.df.dev_name=rmnet_usb0
-
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
 ##property to choose between virtual/external wfd display
 persist.sys.wfd.virtual=0
-
-
 #property to enable HWC for VDS
 debug.sf.enable_hwc_vds=1
-
 #property to latch unsignaled buffer
 debug.sf.latch_unsignaled=1
-
 # enable tunnel encoding for amrwb
-tunnel.audio.encode = true
-
+tunnel.audio.encode=true
 #enable voice path for PCM VoIP by default
 use.voice.path.for.pcm.voip=true
-
 # system prop for NFC DT
 ro.nfc.port=I2C
-
 #initialize QCA1530 detection
 sys.qca1530=detect
-
 #Enable stm events
 persist.debug.coresight.config=stm-events
-
 #hwui properties
 ro.hwui.texture_cache_size=72
 ro.hwui.layer_cache_size=48
@@ -122,41 +108,35 @@ ro.hwui.text_small_cache_width=1024
 ro.hwui.text_small_cache_height=1024
 ro.hwui.text_large_cache_width=2048
 ro.hwui.text_large_cache_height=1024
-
 config.disable_rtt=true
-
 #Bringup properties
 persist.sys.force_sw_gles=1
 persist.vendor.radio.atfwd.start=true
 ro.kernel.qemu.gles=0
 qemu.hw.mainkeys=0
-
 #Expose aux camera for all packages
 persist.vendor.camera.expose.aux=1
-
 #enable IZat OptInApp overlay
 persist.vendor.overlay.izat.optin=rro
-
 # Property for backup NTP Server
 persist.backup.ntpServer="0.pool.ntp.org"
-
 #Property to enable Mag filter
 persist.vendor.sensors.enable.mag_filter=true
-
 #Property to enable Codec2 for audio and OMX for Video
 debug.stagefright.ccodec=1
-
 #Property to set native recorder's maximum base layer fps
-ro.media.recorder-max-base-layer-fps = 60
+ro.media.recorder-max-base-layer-fps=60
 #modem dump
 persist.vendor.ssr.enable_ramdumps=1
 #Battery Property
-ro.charger.enable_suspend = 1
-
+ro.charger.enable_suspend=1
+#Disable MTE Async for system server
+arm64.memtag.process.system_server=off
+# Disable blur on app launch
+ro.launcher.blur.appLaunch=0
 #button jack mode & switch
 persist.audio.button_jack.profile=volume
 persist.audio.button_jack.switch=0
-
 #sysprop for WLAN
 ro.hardware.wlan.vendor=qcom
 ro.hardware.wlan.chip=685x

@@ -490,6 +490,7 @@ PRODUCT_PACKAGES += \
     init.qti.ufs.rc \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.xiaomi.camera.rc \
     fstab.qcom \
     ueventd.qcom.rc \
 

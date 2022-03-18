@@ -33,6 +33,7 @@ import /vendor/etc/init/hw/init.qti.kernel.rc
 import /vendor/etc/init/hw/init.mi_thermald.rc
 import /vendor/etc/init/hw/init.batterysecret.rc
 import /vendor/etc/init/init.charge_logger.rc
+import /vendor/etc/init/hw/init.xiaomi.camera.rc
 
 on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/vendor_modprobe.sh
@@ -119,7 +120,6 @@ on post-fs
 on late-fs
     wait_for_prop hwservicemanager.ready true
     #exec_start wait_for_keymaster
-    start console
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
@@ -149,6 +149,11 @@ on post-fs-data
     chown system system /sys/class/leds/led:switch_0/brightness
     chown system system /sys/class/leds/led:switch_1/brightness
     chown system system /sys/class/leds/led:switch_2/brightness
+    chown system system /sys/class/leds/led:switch_3/brightness
+    chown system system /sys/class/leds/led:switch_0/trigger
+    chown system system /sys/class/leds/led:switch_1/trigger
+    chown system system /sys/class/leds/led:switch_2/trigger
+    chown system system /sys/class/leds/led:switch_3/trigger
     chown system system /sys/class/leds/flashlight/brightness
 
     chmod 0664 /sys/class/leds/led:torch_0/brightness
@@ -162,26 +167,31 @@ on post-fs-data
     chmod 0664 /sys/class/leds/led:switch_0/brightness
     chmod 0664 /sys/class/leds/led:switch_1/brightness
     chmod 0664 /sys/class/leds/led:switch_2/brightness
+    chmod 0664 /sys/class/leds/led:switch_3/brightness
+    chmod 0664 /sys/class/leds/led:switch_0/trigger
+    chmod 0664 /sys/class/leds/led:switch_1/trigger
+    chmod 0664 /sys/class/leds/led:switch_2/trigger
+    chmod 0664 /sys/class/leds/led:switch_3/trigger
     chmod 0664 /sys/class/leds/flashlight/brightness
 
 on post-fs-data
     chmod 0666 /dev/migt
     restorecon /dev/migt
-    chmod 0666 /sys/module/migt/parameters/migt_freq
+    chmod 0777 /sys/module/migt/parameters/migt_freq
     restorecon /sys/module/migt/parameters/migt_freq
-    chmod 0666 /sys/module/migt/parameters/migt_ms
+    chmod 0777 /sys/module/migt/parameters/migt_ms
     restorecon /sys/module/migt/parameters/migt_ms
-    chmod 0666 /sys/module/migt/parameters/migt_thresh
+    chmod 0777 /sys/module/migt/parameters/migt_thresh
     restorecon /sys/module/migt/parameters/migt_thresh
-    chmod 0666 /sys/module/migt/parameters/boost_policy
+    chmod 0777 /sys/module/migt/parameters/boost_policy
     restorecon /sys/module/migt/parameters/boost_policy
-    chmod 0666 /sys/module/migt/parameters/fps_variance_ratio
+    chmod 0777 /sys/module/migt/parameters/fps_variance_ratio
     restorecon /sys/module/migt/parameters/fps_variance_ratio
-    chmod 0666 /sys/module/migt/parameters/super_task_max_num
+    chmod 0777 /sys/module/migt/parameters/super_task_max_num
     restorecon /sys/module/migt/parameters/super_task_max_num
-    chmod 0666 /sys/module/migt/parameters/migt_ceiling_freq
+    chmod 0777 /sys/module/migt/parameters/migt_ceiling_freq
     restorecon /sys/module/migt/parameters/migt_ceiling_freq
-    chmod 0666 /sys/module/migt/parameters/stask_candidate_num
+    chmod 0777 /sys/module/migt/parameters/stask_candidate_num
     restorecon /sys/module/migt/parameters/stask_candidate_num
     chmod 0666 /sys/module/migt/parameters/glk_disable
     restorecon /sys/module/migt/parameters/glk_disable
@@ -197,24 +207,7 @@ on post-fs-data
     restorecon /sys/module/migt/parameters/force_stask_to_big
     chmod 0666 /sys/module/migt/parameters/force_reset_runtime
     restorecon /sys/module/migt/parameters/force_reset_runtime
-    chmod 0666 /sys/module/migt/parameters/mi_viptask
-    restorecon /sys/module/migt/parameters/mi_viptask
     mkdir /data/vendor/misc/display 0771 system system
-
-    chown root system /sys/module/migt/parameters/add_lclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/add_lclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/del_lclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/del_lclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/add_mclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/add_mclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/del_mclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/del_mclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/add_bclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/add_bclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/del_bclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/del_bclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/reset_clus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/reset_clus_affinity_uidlist
 
 on early-boot
     start vendor.sensors

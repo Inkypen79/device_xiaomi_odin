@@ -1,0 +1,23 @@
+on early-init
+    # add xiaomi mem cgroups, used by camera
+    mkdir /dev/memcg/camera/ 0755 system system
+    write /dev/memcg/camera/memory.swappiness 100
+    write /dev/memcg/camera/memory.use_hierarchy 1
+
+    mkdir /dev/memcg/camera/app  0755 system system
+    write /dev/memcg/camera/app/memory.cache 0
+    mkdir /dev/memcg/camera/provider  0755 system system
+    write /dev/memcg/camera/provider/memory.cache 1
+    mkdir /dev/memcg/camera/service  0755 system system
+    write /dev/memcg/camera/service/memory.cache 2
+
+    mkdir /dev/memcg/camera/media 0755 system system
+    mkdir /dev/memcg/camera/media/service 0755 system system
+    write /dev/memcg/camera/media/service/memory.cache 3
+    mkdir /dev/memcg/camera/media/codec 0755 system system
+    mkdir /dev/memcg/camera/media/codec/codec 0755 system system
+    write /dev/memcg/camera/media/codec/codec/memory.cache 4
+    mkdir /dev/memcg/camera/media/codec/hw 0755 system system
+    write /dev/memcg/camera/media/codec/hw/memory.cache 5
+    mkdir /dev/memcg/camera/media/codec/sw 0755 system system
+    write /dev/memcg/camera/media/codec/sw/memory.cache 6
