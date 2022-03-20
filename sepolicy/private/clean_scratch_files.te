@@ -5,3 +5,9 @@ typeattribute clean_scratch_files coredomain;
 
 # Started by init
 init_daemon_domain(clean_scratch_files)
+
+allow clean_scratch_files metadata_file:dir search;
+allow clean_scratch_files gsid:binder call;
+allow clean_scratch_files gsi_metadata_file:dir search;
+allow clean_scratch_files gsi_service:service_manager find;
+allow clean_scratch_files servicemanager:binder { call transfer };
