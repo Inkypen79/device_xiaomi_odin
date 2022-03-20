@@ -70,7 +70,7 @@
 
     <!-- Minimum screen brightness setting allowed by power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.0</item>
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.001</item>
 
     <!-- Maximum screen brightness allowed by the power manager.
          The user is forbidden from setting the brightness above this level -->
