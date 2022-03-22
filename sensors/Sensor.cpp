@@ -213,15 +213,14 @@ OneShotSensor::OneShotSensor(int32_t sensorHandle, ISensorsEventCallback* callba
     mSensorInfo.flags |= SensorFlagBits::ONE_SHOT_MODE;
 }
 
-SysfsPollingOneShotSensor::SysfsPollingOneShotSensor(int32_t sensorHandle,
-                                                     ISensorsEventCallback* callback,
-                                                     const std::string& pollPath,
-                                                     const std::string& enablePath)
+SysfsPollingOneShotSensor::SysfsPollingOneShotSensor(
+    int32_t sensorHandle, ISensorsEventCallback* callback, const std::string& pollPath,
+    const std::string& enablePath, const std::string& name, const std::string& typeAsString,
+    SensorType type)
     : OneShotSensor(sensorHandle, callback) {
-    mSensorInfo.name = "UDFPS Sensor";
-    mSensorInfo.type =
-        static_cast<SensorType>(static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) + 1);
-    mSensorInfo.typeAsString = "org.pixelexperience.sensor.udfps";
+    mSensorInfo.name = name;
+    mSensorInfo.type = type;
+    mSensorInfo.typeAsString = typeAsString;
     mSensorInfo.maxRange = 3200.0f;
     mSensorInfo.resolution = 1.0f;
     mSensorInfo.power = 0;

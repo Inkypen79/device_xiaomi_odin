@@ -95,7 +95,9 @@ class OneShotSensor : public Sensor {
 class SysfsPollingOneShotSensor : public OneShotSensor {
   public:
     SysfsPollingOneShotSensor(int32_t sensorHandle, ISensorsEventCallback* callback,
-                              const std::string& pollPath, const std::string& enablePath);
+                              const std::string& pollPath, const std::string& enablePath,
+                              const std::string& name, const std::string& typeAsString,
+                              SensorType type);
     virtual ~SysfsPollingOneShotSensor() override;
 
     virtual void activate(bool enable) override;
@@ -120,7 +122,10 @@ const std::string kFodModePath = kFtsPath + "fod_status";
 class UdfpsSensor : public SysfsPollingOneShotSensor {
   public:
     UdfpsSensor(int32_t sensorHandle, ISensorsEventCallback* callback)
-        : SysfsPollingOneShotSensor(sensorHandle, callback, kFodPressedPath, kFodModePath) {}
+        : SysfsPollingOneShotSensor(
+              sensorHandle, callback, kFodPressedPath, kFodModePath, "UDFPS Sensor",
+              "org.lineageos.sensor.udfps",
+              static_cast<SensorType>(static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) + 1)) {}
 
   protected:
     virtual std::vector<Event> readEvents() override;
