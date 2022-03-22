@@ -262,6 +262,12 @@ SysfsPollingOneShotSensor::~SysfsPollingOneShotSensor() {
     interruptPoll();
 }
 
+void SysfsPollingOneShotSensor::writeEnable(bool enable) {
+    if (mEnableStream) {
+        mEnableStream << (enable ? '1' : '0') << std::flush;
+    }
+}
+
 void SysfsPollingOneShotSensor::activate(bool enable, bool notify, bool lock) {
     std::unique_lock<std::mutex> runLock(mRunMutex, std::defer_lock);
 
@@ -270,9 +276,7 @@ void SysfsPollingOneShotSensor::activate(bool enable, bool notify, bool lock) {
     }
 
     if (mIsEnabled != enable) {
-        if (mEnableStream) {
-            mEnableStream << (enable ? '1' : '0') << std::flush;
-        }
+        writeEnable(enable);
 
         mIsEnabled = enable;
 

@@ -102,6 +102,7 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
 
     virtual void activate(bool enable) override;
     virtual void activate(bool enable, bool notify, bool lock);
+    virtual void writeEnable(bool enable);
     virtual void setOperationMode(OperationMode mode) override;
 
   protected:
