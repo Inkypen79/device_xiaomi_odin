@@ -108,10 +108,11 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
   protected:
     virtual void run() override;
 
+    std::ofstream mEnableStream;
+
   private:
     void interruptPoll();
 
-    std::ofstream mEnableStream;
     struct pollfd mPolls[2];
     int mWaitPipeFd[2];
     int mPollFd;
