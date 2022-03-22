@@ -262,19 +262,33 @@ SysfsPollingOneShotSensor::~SysfsPollingOneShotSensor() {
     interruptPoll();
 }
 
-void SysfsPollingOneShotSensor::activate(bool enable) {
-    std::lock_guard<std::mutex> lock(mRunMutex);
+void SysfsPollingOneShotSensor::activate(bool enable, bool notify, bool lock) {
+    std::unique_lock<std::mutex> runLock(mRunMutex, std::defer_lock);
+
+    if (lock) {
+        runLock.lock();
+    }
 
     if (mIsEnabled != enable) {
-        mIsEnabled = enable;
-
-        interruptPoll();
-        mWaitCV.notify_all();
-
         if (mEnableStream) {
             mEnableStream << (enable ? '1' : '0') << std::flush;
         }
+
+        mIsEnabled = enable;
+
+        if (notify) {
+            interruptPoll();
+            mWaitCV.notify_all();
+        }
     }
+
+    if (lock) {
+        runLock.unlock();
+    }
+}
+
+void SysfsPollingOneShotSensor::activate(bool enable) {
+    activate(enable, true, true);
 }
 
 void SysfsPollingOneShotSensor::setOperationMode(OperationMode mode) {
@@ -303,10 +317,7 @@ void SysfsPollingOneShotSensor::run() {
             }
 
             if (mPolls[1].revents == mPolls[1].events && readBool(mPollFd, true /* seek */)) {
-                if (mEnableStream) {
-                    mEnableStream << '0' << std::flush;
-                }
-                mIsEnabled = false;
+                activate(false, false, false);
                 mCallback->postEvents(readEvents(), isWakeUpSensor());
             } else if (mPolls[0].revents == mPolls[0].events) {
                 readBool(mWaitPipeFd[0], false /* seek */);
