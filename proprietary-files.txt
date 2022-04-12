@@ -344,6 +344,7 @@ vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 vendor/etc/init/hw/init.xiaomi.camera.rc
 vendor/lib/libc++_shared.so
 vendor/lib/libcamera_nn_stub.so
+vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
