@@ -58,9 +58,6 @@
     <!-- Whether device supports double tap to wake -->
      <bool name="config_supportDoubleTapWake">true</bool>
 
-    <!-- True if the device supports system navigation keys. -->
-     <bool name="config_supportSystemNavigationKeys">true</bool>
-
     <!-- True if the device supports Sustained Performance Mode-->
      <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
