@@ -22,6 +22,7 @@
 #include "xiaomi_fingerprint.h"
 #include "BiometricsFingerprint.h"
 
+#include <android-base/properties.h>
 #include <inttypes.h>
 #include <poll.h>
 #include <unistd.h>
@@ -87,6 +88,8 @@ static const char *kHALClasses[] = {
 using RequestStatus =
         android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
 
+using ::android::base::SetProperty;
+
 BiometricsFingerprint *BiometricsFingerprint::sInstance = nullptr;
 
 BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevice(nullptr) {
@@ -95,8 +98,11 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
         mDevice = openHal(class_name);
         if (!mDevice) {
             ALOGE("Can't open HAL module, class %s", class_name);
+            SetProperty("persist.vendor.sys.fp.vendor", "none");
         } else {
             ALOGI("Opened fingerprint HAL, class %s", class_name);
+            SetProperty("persist.vendor.sys.fp.vendor", class_name);
+            SetProperty("ro.hardware.fp.udfps", "true");
             break;
         }
     }
