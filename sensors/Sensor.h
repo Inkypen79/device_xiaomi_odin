@@ -110,6 +110,9 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
 
     std::ofstream mEnableStream;
 
+    int mScreenX;
+    int mScreenY;
+
   private:
     void interruptPoll();
 
@@ -119,7 +122,7 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
 };
 
 const std::string kFtsPath = "/sys/devices/virtual/touch/tp_dev/";
-const std::string kFodPressedPath = kFtsPath + "fod_pressed";
+const std::string kFodPressedPath = kFtsPath + "fod_state";
 const std::string kFodModePath = kFtsPath + "fod_status";
 
 class UdfpsSensor : public SysfsPollingOneShotSensor {

@@ -22,8 +22,9 @@
 
 #include <cmath>
 
-static bool readBool(int fd, bool seek) {
-    char c;
+static bool readFpState(int fd, int& screenX, int& screenY, bool seek) {
+    char buffer[512];
+    int state = 0;
     int rc;
 
     if (seek) {
@@ -34,13 +35,19 @@ static bool readBool(int fd, bool seek) {
         }
     }
 
-    rc = read(fd, &c, sizeof(c));
-    if (rc != 1) {
-        ALOGE("failed to read bool: %d", rc);
+    rc = read(fd, &buffer, sizeof(buffer));
+    if (rc < 0) {
+        ALOGE("failed to read state: %d", rc);
         return false;
     }
 
-    return c != '0';
+    rc = sscanf(buffer, "%d,%d,%d", &screenX, &screenY, &state);
+    if (rc < 0) {
+        ALOGE("failed to parse fp state: %d", rc);
+        return false;
+    }
+
+    return state > 0;
 }
 
 namespace android {
@@ -320,11 +327,11 @@ void SysfsPollingOneShotSensor::run() {
                 continue;
             }
 
-            if (mPolls[1].revents == mPolls[1].events && readBool(mPollFd, true /* seek */)) {
+            if (mPolls[1].revents == mPolls[1].events && readFpState(mPollFd, mScreenX, mScreenY, true /* seek */)) {
                 activate(false, false, false);
                 mCallback->postEvents(readEvents(), isWakeUpSensor());
             } else if (mPolls[0].revents == mPolls[0].events) {
-                readBool(mWaitPipeFd[0], false /* seek */);
+                readFpState(mPollFd, mScreenX, mScreenY, false /* seek */);
             }
         }
     }
@@ -343,8 +350,8 @@ std::vector<Event> UdfpsSensor::readEvents() {
     event.sensorHandle = mSensorInfo.sensorHandle;
     event.sensorType = mSensorInfo.type;
     event.timestamp = ::android::elapsedRealtimeNano();
-    event.u.data[0] = 720;
-    event.u.data[1] = 2490;
+    event.u.data[0] = mScreenX;
+    event.u.data[1] = mScreenY;
     events.push_back(event);
     return events;
 }

@@ -8,4 +8,4 @@ service vendor.sensors-hal-2-1-multihal /vendor/bin/hw/android.hardware.sensors@
 
 on boot
     # FOD
-    chown system system /sys/devices/virtual/touch/tp_dev/fod_pressed
+    chown system system /sys/devices/virtual/touch/tp_dev/fod_state
