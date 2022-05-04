@@ -142,11 +142,12 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Camera
+$(call inherit-product-if-exists, vendor/anxcamera/config.mk)
+
 PRODUCT_PACKAGES += \
     CutoutRingServiceOdin \
     libcamera2ndk_vendor \
-    libgui_vendor \
-    Snap
+    libgui_vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
@@ -261,10 +262,7 @@ PRODUCT_PACKAGES += \
 
 # IFAA manager
 PRODUCT_PACKAGES += \
-    org.ifaa.android.manager
-
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
+    IFAAService
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -326,6 +324,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
+
+# Mlipay
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor:64
 
 # Net
 PRODUCT_PACKAGES += \
