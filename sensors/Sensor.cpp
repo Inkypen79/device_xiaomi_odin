@@ -36,7 +36,9 @@ static bool readFpState(int fd, int& screenX, int& screenY, bool seek) {
     }
 
     rc = read(fd, &buffer, sizeof(buffer));
-    if (rc < 0) {
+    if (rc == 0) {
+        return false;
+    } else if (rc < 0) {
         ALOGE("failed to read state: %d", rc);
         return false;
     }
