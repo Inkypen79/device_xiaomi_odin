@@ -112,6 +112,7 @@ config.disable_rtt=true
 #Bringup properties
 persist.sys.force_sw_gles=1
 persist.vendor.radio.atfwd.start=true
+qemu.sf.lcd_density=440
 ro.kernel.qemu.gles=0
 qemu.hw.mainkeys=0
 #Expose aux camera for all packages
