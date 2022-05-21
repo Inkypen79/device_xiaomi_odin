@@ -69,6 +69,7 @@ persist.fuse_sdcard=true
 ro.bluetooth.library_name=libbluetooth_qti.so
 persist.vendor.btstack.aac_frm_ctl.enabled=true
 persist.vendor.btstack.enable.lpa=true
+persist.vendor.btstack.enable.twsplus=true
 #system prop for RmNet Data
 persist.rmnet.data.enable=true
 persist.data.wda.enable=true
