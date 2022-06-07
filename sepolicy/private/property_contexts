@@ -23,3 +23,6 @@ persist.sensor.                 u:object_r:vendor_sensors_prop:s0
 
 #
 ro.vendor.oem.                  u:object_r:deviceid_prop:s0
+
+# WiFi Display
+persist.vendor.setWFDInfo.      u:object_r:vendor_wfd_sys_debug_prop:s0
