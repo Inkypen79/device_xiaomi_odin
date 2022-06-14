@@ -191,14 +191,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.display.config@1.15 \
     vendor.display.config@1.15.vendor \
+    vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor
 
 PRODUCT_PACKAGES += \
     gralloc.default \
+    libdisplayconfig.system.qti \
     libdisplayconfig.qti \
     libdisplayconfig.qti.vendor \
     libmemutils \
     libqdMetaData \
+    libqdMetaData.system \
     libtinyxml \
     memtrack.default
 
