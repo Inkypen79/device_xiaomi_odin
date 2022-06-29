@@ -379,22 +379,18 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage/lineage-sdk
 
 PRODUCT_PACKAGES += \
-    CarrierConfigResCommon \
-    FrameworksResCommon \
-    FrameworksResTarget \
-    SystemUIResCommon \
-    SystemUIResTarget \
-    TelephonyResCommon \
-    WifiResCommon \
-    WifiResTarget
+    CarrierConfigResOdin \
+    FrameworksResOdin \
+    SettingsProviderResOdin \
+    SettingsResOdin \
+    SystemUIResOdin \
+    TelephonyResOdin \
+    WifiResOdin
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -554,10 +550,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
-# Tethering
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
-
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti \
@@ -615,7 +607,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.fstman@1.0.vendor \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
     vendor.qti.hardware.wifi.supplicant@2.2.vendor \
-    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
