@@ -327,6 +327,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.mlipay@1.1.vendor:64
 
+# MTD service
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mtdservice@1.2.vendor
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
