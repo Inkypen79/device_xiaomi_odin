@@ -15,8 +15,8 @@
 //
 
 cc_binary {
-    name: "vendor.lineage.fastcharge@1.0-service.samsung",
-    init_rc: ["vendor.lineage.fastcharge@1.0-service.samsung.rc"],
+    name: "vendor.lineage.fastcharge@1.0-service.odin",
+    init_rc: ["vendor.lineage.fastcharge@1.0-service.odin.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     proprietary: true,
@@ -33,5 +33,5 @@ cc_binary {
         "libutils",
         "vendor.lineage.fastcharge@1.0",
     ],
-    vintf_fragments: ["vendor.lineage.fastcharge@1.0-service.samsung.xml"],
+    vintf_fragments: ["vendor.lineage.fastcharge@1.0-service.odin.xml"],
 }

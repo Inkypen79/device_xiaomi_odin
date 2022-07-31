@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "fastcharge@1.0-service.samsung"
+#define LOG_TAG "fastcharge@1.0-service.odin"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>

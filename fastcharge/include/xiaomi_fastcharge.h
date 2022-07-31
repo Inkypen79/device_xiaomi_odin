@@ -16,5 +16,5 @@
 
 #pragma once
 
-#define FASTCHARGE_DEFAULT_SETTING true
-#define FASTCHARGE_PATH "/sys/class/sec/switch/afc_disable"
+#define FASTCHARGE_DEFAULT_SETTING 1
+#define FASTCHARGE_PATH "/sys/class/qcom-battery/sport_mode"

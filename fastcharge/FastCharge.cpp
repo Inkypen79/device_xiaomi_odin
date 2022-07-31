@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "fastcharge@1.0-service.samsung"
+#define LOG_TAG "fastcharge@1.0-service.odin"
 
 #include "FastCharge.h"
 #include <android-base/logging.h>
@@ -22,7 +22,7 @@
 
 #include <fstream>
 #include <iostream>
-#include "samsung_fastcharge.h"
+#include "xiaomi_fastcharge.h"
 
 namespace vendor {
 namespace lineage {
@@ -30,7 +30,7 @@ namespace fastcharge {
 namespace V1_0 {
 namespace implementation {
 
-static constexpr const char* kFastChargingProp = "persist.vendor.sec.fastchg_enabled";
+static constexpr const char* kFastChargingProp = "persist.vendor.fastchg_enabled";
 
 /*
  * Write value to path and close file.
@@ -80,14 +80,14 @@ FastCharge::FastCharge() {
 }
 
 Return<bool> FastCharge::isEnabled() {
-    return get(FASTCHARGE_PATH, 0) < 1;
+    return get(FASTCHARGE_PATH, 0) > 0;
 }
 
 Return<bool> FastCharge::setEnabled(bool enable) {
-    set(FASTCHARGE_PATH, enable ? 0 : 1);
+    set(FASTCHARGE_PATH, enable ? 1 : 0);
 
     bool enabled = isEnabled();
-    property_set(kFastChargingProp, enabled ? "true" : "false");
+    property_set(kFastChargingProp, enabled ? "1" : "0");
 
     return enabled;
 }
