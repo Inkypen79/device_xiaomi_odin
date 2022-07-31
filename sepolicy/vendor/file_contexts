@@ -29,6 +29,9 @@
 # EFS
 /dev/block/sde[0-9]                                                          u:object_r:efs_block_device:s0
 
+# Fastcharge
+/vendor/bin/hw/vendor\.lineage\.fastcharge@1\.0-service\.odin                u:object_r:hal_lineage_fastcharge_default_exec:s0
+
 # Fingerprint
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.odin                                                u:object_r:hal_fingerprint_default_exec:s0
 
