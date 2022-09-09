@@ -100,6 +100,14 @@ class XiaomiUdfpsHander : public UdfpsHandler {
         // nothing
     }
 
+    void onAcquired(int32_t /*result*/, int32_t /*vendorCode*/) {
+        // nothing
+    }
+
+    void cancel() {
+        // nothing
+    }
+
   private:
     fingerprint_device_t* mDevice;
 };
