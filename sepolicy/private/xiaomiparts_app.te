@@ -16,6 +16,7 @@ allow xiaomiparts_app {
   mediaextractor_service
   mediametrics_service
   mediaserver_service
+  netstats_service
   sensorservice_service
   storagestats_service
   surfaceflinger_service

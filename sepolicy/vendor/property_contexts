@@ -39,6 +39,9 @@ vendor.sys.rpmb_state                       u:object_r:vendor_payment_security_p
 # Thermal
 vendor.sys.thermal.                         u:object_r:vendor_thermal_normal_prop:s0
 
+# USB
+vendor.sys.usb.adb.disabled                 u:object_r:vendor_usb_prop:s0
+
 # UWB
 persist.vendor.uwb.calibration              u:object_r:vendor_uwb_prop:s0
 persist.vendor.uwb.color                    u:object_r:vendor_uwb_prop:s0
