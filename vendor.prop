@@ -39,7 +39,6 @@ persist.sys.brightmillet.enable=true
 persist.sys.camera.boost.ext.mem=1048576
 persist.sys.camera.boost.reclaim.pages=524288
 persist.sys.camera.boost.threshold=2621440
-persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.sys.gz.enable=true
 persist.sys.gz.frozen=true
 persist.sys.lmk.camera_minfree_levels=18432:0,23040:100,27648:200,64512:300,115712:800,216370:900
