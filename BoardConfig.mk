@@ -130,9 +130,12 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=1 LLVM_IAS=1
+TARGET_KERNEL_ADDITIONAL_FLAGS += AR=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-r468909b/bin/llvm-ar
+TARGET_KERNEL_ADDITIONAL_FLAGS += LD=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-r468909b/bin/ld.lld
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r458507
+TARGET_KERNEL_CLANG_VERSION := r468909b
+TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_CONFIG := odin_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/odin
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
