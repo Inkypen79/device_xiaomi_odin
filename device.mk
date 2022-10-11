@@ -183,7 +183,6 @@ PRODUCT_PACKAGES += \
     gralloc.default \
     libdisplayconfig.system.qti \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
     libmemutils \
     libqdMetaData \
     libqdMetaData.system \
@@ -234,7 +233,6 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
     android.hardware.health@2.1-service
 
 # HIDL
