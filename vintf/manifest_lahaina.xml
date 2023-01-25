@@ -300,6 +300,16 @@
         <fqname>@1.1::IFactory/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.fm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFmHci</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IFmHci/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.fstman</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -568,15 +578,5 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IMiPostProcService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.xiaomi.hardware.displayfeature</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IDisplayFeature</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IDisplayFeature/default</fqname>
     </hal>
 </manifest>
