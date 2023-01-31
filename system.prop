@@ -1,6 +1,6 @@
-#
+####################################
 # from device/xiaomi/missi/system.prop
-#
+####################################
 #
 # system.prop for missi
 #
@@ -42,7 +42,12 @@ media.aac_51_output_enabled=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 #16777215 is decimal sum of supported codecs in AAL
 #codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE DSD MOV MHAS
-vendor.mm.enable.qcom_parser=16777215
+# DOLBY_START // use aosp parser for ac4
+#vendor.mm.enable.qcom_parser=16777215
+#vendor.mm.enable.qcom_parser=16776959
+#not support mp3 & MHAS & PARSER_3GP
+#vendor.mm.enable.qcom_parser=8380415
+# DOLBY_END
 persist.mm.enable.prefetch=true
 #
 # system props for the data modules
@@ -65,6 +70,9 @@ telephony.lteOnCdmaDevice=1
 #Simulate sdcard on /data/media
 #
 persist.fuse_sdcard=true
+#System props for BT
+#ro.bluetooth.library_name=libbluetooth_qti.so
+persist.vendor.btstack.aac_frm_ctl.enabled=true
 #system prop for RmNet Data
 persist.rmnet.data.enable=true
 persist.data.wda.enable=true
@@ -113,6 +121,8 @@ ro.kernel.qemu.gles=0
 qemu.hw.mainkeys=0
 #Expose aux camera for all packages
 persist.vendor.camera.expose.aux=1
+#Add snapcam in privapp list
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera
 #enable IZat OptInApp overlay
 persist.vendor.overlay.izat.optin=rro
 # Property for backup NTP Server
@@ -138,27 +148,13 @@ persist.audio.button_jack.switch=0
 ro.hardware.wlan.vendor=qcom
 ro.hardware.wlan.chip=685x
 ro.hardware.wlan.mimo=1
-# end of device/xiaomi/missi/system.prop
-
-# Blur
+#Property for BLUR
 persist.sys.sf.disable_blurs=1
 ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
-
-#iwlan vowifi
-persist.vendor.data.iwlan.enable=true
-
-#set ims related prop
-persist.dbg.ims_volte_enable=1
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
-persist.dbg.wfc_avail_ovr=1
-persist.radio.data_ltd_sys_ind=1
-persist.radio.data_con_rprt=1
-persist.radio.calls.on.ims=1
-persist.radio.volte.dan_support=true
-persist.sys.cust.lte_config=true
-persist.radio.VT_ENABLE=1
-persist.radio.VT_HYBRID_ENABLE=1
-
-#
+# property for fuse passthrough
+persist.sys.fuse.passthrough.enable=true
+#Property for remote keyguard animation
+persist.wm.enable_remote_keyguard_animation=0
+# nokia audio room for vts
+#persist.vendor.audio.ozo.codec.enable=true
