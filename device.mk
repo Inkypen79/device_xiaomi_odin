@@ -120,7 +120,8 @@ $(call inherit-product-if-exists, vendor/anxcamera/config.mk)
 PRODUCT_PACKAGES += \
     CutoutRingServiceOdin \
     libcamera2ndk_vendor \
-    libgui_vendor
+    libgui_vendor \
+    libion.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
