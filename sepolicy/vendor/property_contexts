@@ -26,6 +26,9 @@ vendor.dtool.                               u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.                             u:object_r:vendor_fp_prop:s0
 vendor.panel.display.                       u:object_r:vendor_fp_prop:s0
 
+# Media
+ro.vendor.media_performance_class           u:object_r:vendor_media_performance_class:s0
+
 # Mlipay
 persist.vendor.sys.pay.fido                 u:object_r:vendor_payment_security_prop:s0
 persist.vendor.sys.pay.ifaa                 u:object_r:vendor_payment_security_prop:s0

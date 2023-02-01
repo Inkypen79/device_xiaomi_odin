@@ -15,6 +15,18 @@ ro.ril.oem.meid                 u:object_r:deviceid_prop:s0
 ro.cust.test                    u:object_r:exported_system_prop:s0
 ro.miui.                        u:object_r:exported_system_prop:s0
 
+# Misc
+fuse.sys.transcode_retriever_optimize       u:object_r:exported_default_prop:s0
+media.metrics.enabled                       u:object_r:exported_default_prop:s0
+media.stagefright.extractremote             u:object_r:exported_default_prop:s0
+persist.hydra.mem_trace                     u:object_r:exported_default_prop:s0
+persist.media.metrics.enabled               u:object_r:exported_default_prop:s0
+persist.serial.enable                       u:object_r:exported_default_prop:s0
+renderthread.skia.reduceopstasksplitting    u:object_r:exported_default_prop:s0
+ro.build.freeme.label                       u:object_r:exported_default_prop:s0
+ro.ssui.product                             u:object_r:exported_default_prop:s0
+viewroot.profile_rendering                  u:object_r:exported_default_prop:s0
+
 #
 sys.panel.                      u:object_r:vendor_display_prop:s0
 

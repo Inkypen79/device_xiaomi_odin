@@ -2,4 +2,6 @@ dontaudit vendor_init persist_debug_prop:file read;
 
 set_prop(vendor_init, vendor_camera_prop)
 
+get_prop(vendor_init, vendor_media_performance_class)
+
 allow vendor_init block_device:lnk_file create_file_perms;

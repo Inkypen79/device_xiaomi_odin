@@ -6,3 +6,4 @@ allow vendor_qti_init_shell proc_page_cluster:file w_file_perms;
 allow vendor_qti_init_shell proc_watermark_boost_factor:file w_file_perms;
 allow vendor_qti_init_shell proc_watermark_scale_factor:file w_file_perms;
 set_prop(vendor_qti_init_shell, ctl_start_prop)
+set_prop(vendor_qti_init_shell, vendor_media_performance_class)

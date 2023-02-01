@@ -14,6 +14,8 @@ vendor_internal_prop(vendor_fastcharge_prop);
 
 vendor_public_prop(vendor_fp_prop);
 
+vendor_internal_prop(vendor_media_performance_class);
+
 vendor_internal_prop(vendor_slad_prop);
 
 vendor_internal_prop(vendor_uwb_prop);
