@@ -289,6 +289,7 @@ PRODUCT_COPY_FILES += \
 # Neural Net
 PRODUCT_PACKAGES += \
     libtextclassifier_hash.vendor \
+    libtflite.vendor
 
 # NFC
 PRODUCT_PACKAGES += \

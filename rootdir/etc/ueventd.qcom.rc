@@ -41,6 +41,7 @@ subsystem mi_display
 /dev/diag                 0660   system     oem_2901
 /dev/mhi_*_pipe_4         0660   system     system
 
+/dev/xlog                 0660   system     audio
 /dev/genlock              0666   system     system
 /dev/wlan                 0660   wifi       wifi
 /dev/kgsl                 0666   system     system
@@ -411,6 +412,9 @@ subsystem mi_display
 /sys/devices/system/memory/memory* state    0660 system system
 
 /sys/devices/virtual/hdcp/msm_hdcp  min_level_change 0664    system  graphics
+
+#KGSL
+/sys/class/kgsl/kgsl-3d0    perfcounter              0660    root    shell
 
 # sys-fs display
 /sys/class/graphics/fb*     hpd                      0664    system  graphics

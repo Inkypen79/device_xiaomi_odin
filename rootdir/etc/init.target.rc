@@ -99,14 +99,17 @@ on fs
     mount vfat /dev/block/bootdevice/by-name/logfs /dev/logfs noatime umask=006,uid=1000,gid=1000
     mount ext4 /dev/block/bootdevice/by-name/rescue /mnt/rescue noatime
     restorecon_recursive /mnt/rescue
+    chown system system /sys/class/smartpa/re25_calib
     chown system system /dev/tfa_reg
     chown system system /dev/tfa_rw
     chown system system /dev/tfa_rpc
     chown system system /dev/tfa_control
+    chmod 0666 /sys/class/smartpa/re25_calib
     chmod 0660 /dev/tfa_reg
     chmod 0660 /dev/tfa_rw
     chmod 0660 /dev/tfa_rpc
     chmod 0660 /dev/tfa_control
+    chmod 0666 /dev/xlog
 
 on fs && property:ro.boot.product.vendor.sku=lahaina
     mkdir /mnt/vendor/spunvm 0660 system system
@@ -207,10 +210,16 @@ on post-fs-data
     restorecon /sys/module/migt/parameters/force_stask_to_big
     chmod 0666 /sys/module/migt/parameters/force_reset_runtime
     restorecon /sys/module/migt/parameters/force_reset_runtime
+    chmod 0666 /sys/module/migt/parameters/mi_viptask
+    restorecon /sys/module/migt/parameters/mi_viptask
     mkdir /data/vendor/misc/display 0771 system system
+
+    chmod 0662 /dev/miev
+    restorecon /dev/miev
 
 on early-boot
     start vendor.sensors
+    verity_update_state
     # Enable WLAN cold boot calibration
     write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready 1
     chmod 0202 /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/data_stall
@@ -219,6 +228,7 @@ on boot
     chown system system /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/balance_mode
     chown system system /sys/class/thermal/thermal_message/charger_temp
+    chown cameraserver cameraserver /sys/class/thermal/thermal_message/flash_state
 
     # Set DT2W permission
     chown system system /sys/devices/virtual/touch/tp_dev/double_tap
@@ -246,6 +256,9 @@ on boot
     chmod 0666 /dev/stune/top-app/cgroup.procs
 
     write /dev/cpuset/audio-app/cpus 1-2
+    # init the  cpuset value for the camera background,don't change the oder
+    write /dev/cpuset/camera-background/background/cpus 0-2
+    write /dev/cpuset/camera-background/cpus 0-3
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
@@ -303,6 +316,15 @@ on boot
     chmod 0664 /sys/class/mi_display/disp-DSI-1/disp_count
     chown system system /sys/class/mi_display/disp-DSI-0/brightness_clone
     chmod 0664 /sys/class/mi_display/disp-DSI-0/brightness_clone
+    chown system system /sys/class/mi_display/disp-DSI-0/max_brightness_clone
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/max_brightness_clone
+
+    # Display feature sysfs node for penel1
+    chown system system /sys/class/mi_display/disp-DSI-1/brightness_clone
+    chmod 0664 /sys/class/mi_display/disp-DSI-1/brightness_clone
+    chown system system /sys/class/mi_display/disp-DSI-1/max_brightness_clone
+    chmod 0664 /sys/class/mi_display/disp-DSI-1/max_brightness_clone
+
     chown system system /sys/class/mi_display/disp-DSI-1/dynamic_fps
     chmod 0444 /sys/class/mi_display/disp-DSI-1/dynamic_fps
 
@@ -377,6 +399,10 @@ on property:vendor.audio.cit.spkcal.copy=true
     chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_md.txt
     chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_ft.txt
     chmod 666 /mnt/vendor/persist/audio/cs35l45_cal_fd.txt
+    copy /data/vendor/cit/aw_cali.bin /mnt/vendor/persist/audio/aw_cali.bin
+    copy /data/vendor/cit/aw88263_chk.txt /mnt/vendor/persist/audio/aw88263_chk.txt
+    chmod 666 /mnt/vendor/persist/audio/aw_cali.bin
+    chmod 666 /mnt/vendor/persist/audio/aw88263_chk.txt
 
 service vendor.lowi /vendor/bin/lowirpcd
    class core
@@ -426,13 +452,20 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
-on property:vold.decrypt=trigger_restart_framework
-   start vendor.cnss_diag
+#on property:vold.decrypt=trigger_restart_framework
+#   start vendor.cnss_diag
+
+on property:persist.vendor.cnss_diag.enable=true
+    start vendor.cnss_diag
+
+on property:persist.vendor.cnss_diag.enable=false
+    stop vendor.cnss_diag
 
 service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
    class main
    user system
    group system wifi inet sdcard_rw media_rw diag
+   disabled
    oneshot
 
 service vendor.tcpdump /vendor/bin/tcpdump -i any -W 3 -C 5 -s 134 -w /data/vendor/wlan_logs/tcpdump.pcap
@@ -443,6 +476,13 @@ service vendor.tcpdump /vendor/bin/tcpdump -i any -W 3 -C 5 -s 134 -w /data/vend
        oneshot
 
 service vendor.sniffer /vendor/bin/tcpdump -i wlan0 -w /data/vendor/wlan_logs/sniffer.pcap
+    class main
+    user root
+    group root wifi
+    disabled
+    oneshot
+
+service vendor.sniffer.circular /vendor/bin/tcpdump -i wlan0 -W 3 -C 300 -w /data/vendor/wlan_logs/sniffer.pcap
     class main
     user root
     group root wifi
@@ -477,8 +517,14 @@ service stopbtclog_msg /vendor/bin/iwpriv wlan0 setUnitTestCmd 4 2 12 0
     disabled
     oneshot
 
-on property:sys.user.0.ce_available=true
+#on property:sys.user.0.ce_available=true
+#    start vendor.tcpdump
+
+on property:persist.vendor.tcpdump.enable=true
     start vendor.tcpdump
+
+on property:persist.vendor.tcpdump.enable=false
+    stop vendor.tcpdump
 
 service factory_err_check /system/bin/check_factory_err.sh
     class late_start
@@ -574,6 +620,21 @@ on property:sys.lmkd.memory.compact=1
     setprop sys.lmkd.memory.compact 0
     write /proc/sys/vm/reclaim_pages ${sys.lmkd.memory.reclaim_pages}
     write /proc/sys/vm/compact_memory 1
+
+on property:sys.lmkd.memory.start_reclaim_in_video_record=1
+    setprop sys.lmkd.memory.start_reclaim_in_video_record 0
+    write /sys/kernel/cam_reclaim/config "0 1 1 200000 200000 0 0 12000000000"
+    write /sys/kernel/cam_reclaim/event 1
+
+on property:sys.lmkd.memory.start_reclaim_in_cam_boost=1
+    setprop sys.lmkd.memory.start_reclaim_in_cam_boost 0
+    write /sys/kernel/cam_reclaim/config "0 1 3 400000 400000 0 0 12000000000"
+    write /sys/kernel/cam_reclaim/event 1
+
+# gps Sync attribute value between system and vendor
+on property:persist.sys.mcc.mnc=*
+    setprop persist.vendor.mcc.mnc ${persist.sys.mcc.mnc}
+
 #fan-controller
 service fan_control_turn_on /vendor/bin/fan_control 1
     class late_start

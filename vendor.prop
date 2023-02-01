@@ -103,7 +103,7 @@ ro.soc.model=SM8350
 ro.soc.manufacturer=QTI
 
 #
-# from device/xiaomi/sm8350_common/system_12.prop
+# from device/xiaomi/sm8350_common/system.prop
 #
 # Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
 #
@@ -159,7 +159,7 @@ ro.telephony.default_network=33,33
 ro.telephony.default_cdma_sub=0
 
 # Dynamic MBN-Loading
-persist.vendor.radio.dynamic_load_mbn=3
+persist.vendor.radio.dynamic_load_mbn=7
 
 #set ims related prop
 persist.dbg.ims_volte_enable=1
@@ -268,7 +268,6 @@ ro.bluetooth.wipower=false
 persist.vendor.btstack.enable.swb=true
 persist.vendor.btstack.enable.swbpm=true
 persist.vendor.qcom.bluetooth.enable.swb=true
-persist.vendor.qcom.bluetooth.enable.swbpm=true
 
 #
 #snapdragon value add features
@@ -363,10 +362,7 @@ ro.miui.pm.install.speedinstall=/data/apk-tmp
 
 #sysprop for thermal cloud
 vendor.sys.thermal.data.path=/data/vendor/thermal/
-
-# set recovery release version
-ro.build.version.release=12
-# end of device/xiaomi/sm8350_common/system_12.prop
+# end of device/xiaomi/sm8350_common/system.prop
 #
 # from device/xiaomi/sm8350_common/common_rw.prop
 #
@@ -374,6 +370,9 @@ ro.build.version.release=12
 
 #support night charge property
 persist.vendor.night.charge=true
+
+#enable sensor event to onetrack
+persist.vendor.sensor.onetrack=true
 #
 # from device/xiaomi/odin/special_rw.prop
 #system property for displayfeature hidl
@@ -407,7 +406,6 @@ persist.vendor.gnss.hpLocSetUI=true
 persist.vendor.radio.stats_switch=1
 
 #xiao cameraservice
-persist.service.camera.jank_enable=[60]
 persist.service.camera.frame_offset=6
 persist.service.camera.cache_num=1
 persist.service.camera.his_num=7
@@ -437,6 +435,12 @@ ro.vendor.beluga.t=0x240
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
 wifi.aware.interface=wifi-aware0
+#persist.vendor.cnss_diag.enable=true
+#persist.vendor.tcpdump.enable=true
+ro.hardware.wlan.vendor=qcom
+ro.hardware.wlan.chip=685x
+ro.hardware.wlan.mimo=1
+ro.hardware.wlan.dbs=2
 vendor.audio_hal.period_size=192
 persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.ambisonic.auto.profile=false
@@ -548,6 +552,9 @@ vendor.audio.usb.disable.sidetone=true
 ro.vendor.audio.soundtrigger.adjconf=true
 ro.vendor.audio.afe.record=true
 ro.vendor.audio.notify5Point1InUse=true
+ro.vendor.audio.voice.change.support=true
+ro.vendor.audio.voice.change.youme.support=true
+ro.vendor.audio.voice.change.version=1
 ro.incremental.enable=yes
 persist.radio.multisim.config=dsds
 persist.vendor.qfp=false
@@ -612,7 +619,7 @@ persist.vendor.radio.procedure_bytes=SKIP
 vendor.usb.diag.func.name=ffs
 vendor.usb.use_ffs_mtp=1
 debug.stagefright.ccodec=4
-ro.vendor.touchfeature.type=23
+ro.vendor.touchfeature.type=183
 ro.miui.vicegwsd=true
 persist.vendor.radio.hidl_dev_service=true
 vendor.gatekeeper.disable_spu=true
@@ -621,6 +628,7 @@ persist.sys.spc.enabled=true
 persist.sys.use_mi_new_strategy=true
 persist.sys.mms.write_lmkd=true
 persist.sys.mmms.switch=true
+persist.sys.mms.bg_apps_limit=96
 persist.sys.miui.adj_update_foreground_state.enable.delayMs=3000
 ro.vendor.audio.soundfx.type=mi
 ro.vendor.audio.us.proximity=true
@@ -647,7 +655,6 @@ ro.vendor.audio.soundtrigger.appdefine.gmm.user.level=65
 ro.vendor.audio.soundtrigger.appdefine.cnn.level=45
 ro.vendor.audio.soundtrigger.appdefine.vop.level=10
 ro.vendor.audio.soundtrigger.snr=16
-ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.surround.support=true
 ro.vendor.audio.scenario.support=true
 ro.vendor.audio.spk.stereo=true
@@ -658,7 +665,6 @@ ro.vendor.audio.gain.support=true
 ro.vendor.audio.karaok.support=true
 ro.vendor.audio.zoom.support=true
 ro.vendor.audio.camera.loopback.support=true
-ro.vendor.audio.voice.change.youme.support=true
 ro.vendor.audio.ring.filter=true
 persist.vendor.audio.ring.filter.mask=0
 ro.vendor.audio.zoom.type=2
@@ -668,13 +674,14 @@ ro.vendor.audio.voip.assistant=true
 ro.vendor.audio.voiceopti=true
 ro.vendor.audio.aiasst.support=true
 ro.vendor.audio.surround.headphone.only=true
-ro.vendor.audio.support.sound.id=true
 ro.vendor.audio.misound.bluetooth.enable=true
 ro.vendor.audio.feature.spatial=7
 ro.vendor.audio.multichannel.5point1.headset=true
 ro.vendor.audio.multichannel.5point1=true
 ro.vendor.audio.videobox.switch=true
+ro.vendor.audio.support.sound.id=true
 ro.vendor.audio.miui.karaoke.show=false
+#ro.vendor.audio.policy.engine.odm=true
 debug.media.video.frc=false
 debug.media.video.vpp=false
 ro.vendor.media.video.frc.support=true
@@ -715,24 +722,29 @@ sys.haptic.scroll.edge=7,0
 sys.haptic.trigger.drawer=2,0
 sys.haptic.hold=4,0
 sys.haptic.runin=13
+ro.vendor.audio.us.proximity_waitfornegative_feature=true
 ro.hardware.fp.fod=true
 persist.vendor.sys.fp.fod.location.X_Y=438,1701
 persist.vendor.sys.fp.fod.size.width_height=202,202
+ro.hardware.fp.fod.touch.ctl.version=2.0
 persist.sys.powmillet.enable=true
 persist.sys.brightmillet.enable=true
 persist.sys.millet.handshake=true
 persist.sys.millet.newversion=true
-persist.sys.spc.pressure.enable=false
 ro.vendor.se.type=eSE,HCE,UICC
 ro.vendor.nfc.repair=1
+ro.vendor.nfc.dispatch_optim=1
 vendor.display.enable_default_color_mode=0
 debug.sf.set_idle_timer_ms=1000
+debug.sf.treat_170m_as_sRGB=1
 persist.sys.lmk.camera_minfree_levels=18432:0,23040:100,27648:200,64512:300,115712:800,216370:900
 persist.sys.miui.camera.boost.opt=true
 persist.sys.miui.camera.boost.task=6
 persist.sys.camera.boost.threshold=2621440
 persist.sys.camera.boost.ext.mem=1048576
 persist.sys.camera.boost.reclaim.pages=524288
+persist.sys.miui.camera.boost.killAdj_threshold=201
+persist.sys.miui.camera.protect_prev_ext=true
 persist.sys.miui_scout_enable=true
 persist.sys.miui_sptm.enable=true
 persist.sys.miui_sptm.enable_pl_type=2
@@ -742,6 +754,8 @@ vendor.camera.sensor.logsystem=0
 persist.sys.mem.proclimit.enable=true
 persist.sys.miui.camera.inhibit_procs.enable=true
 persist.sys.miui.camera.inhibit_procs.group=0
+persist.sys.miui.sys_monitor=am.ActivityManagerService,wm.WindowManagerGlobalLock
+
 #
 debug.renderengine.backend=skiaglthreaded
 persist.vendor.recovery_update=false
