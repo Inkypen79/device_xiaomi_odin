@@ -134,8 +134,10 @@ public class CutoutRingService extends BroadcastReceiver {
 
             @Override
             public void onFixedRotationFinished(int displayId) {
-                onRotationChanged();
-                Handler.getMain().post(() -> setVisibility((mCameraActive) ? SHOWN : SHOWN_SMALL));
+                Handler.getMain().post(() -> {
+                    onRotationChanged();
+                    setVisibility((mCameraActive) ? SHOWN : SHOWN_SMALL); 
+                });
                 mFixedRotationInProgress = false;
             }
 
