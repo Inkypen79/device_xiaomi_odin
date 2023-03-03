@@ -515,3 +515,6 @@ subsystem mi_display
 /sys/bus/iio/devices/iio:device* buffer/enable                  0600 system system
 /sys/bus/iio/devices/iio:device* scan_elements/in_proximity_en  0600 system system
 /sys/bus/iio/devices/iio:device* scan_elements/in_timestamp_en  0600 system system
+
+# Charger
+/sys/class/qcom-battery     input_suspend            0660    system  system
