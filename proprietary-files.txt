@@ -1,4 +1,4 @@
-# These proprietary files are extracted from Xiaomi MIX 4 (odin) Android 13 MIUI V14.0.1.0.TKMCNXM, unless pinned
+# These proprietary files are extracted from Xiaomi MIX 4 (odin) Android 13 MIUI V14.0.3.0.TKMCNXM, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
@@ -449,7 +449,7 @@ vendor/lib64/camera/plugins/com.xiaomi.plugin.supernight.so
 vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/camera.xiaomi.so|768c7b267fccc5c2c47a800161d7e58759e77f2b
-vendor/lib64/hw/com.qti.chi.override.so|625b781e63ac32d07dae7921127193bbe76cd233
+vendor/lib64/hw/com.qti.chi.override.so|ebe856c54b32e8cd056b8d381cbb4fa33e5d4e75
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcamera_dirty.so

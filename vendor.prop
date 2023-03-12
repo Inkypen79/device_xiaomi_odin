@@ -346,7 +346,7 @@ ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=15
 
 #Expose aux camera for below packages
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.xiaomi.runin,com.xiaomi.cameratest,com.xiaomi.factory.mmi
+#vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.xiaomi.runin,com.xiaomi.cameratest,com.xiaomi.factory.mmi
 
 # enable temp dds
 persist.vendor.radio.enable_temp_dds=true
