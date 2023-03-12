@@ -2640,7 +2640,6 @@ vendor/etc/spk.wav
 vendor/etc/spk_hp.wav
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
-vendor/etc/task_profiles.json
 vendor/etc/test.wav
 vendor/etc/tof.ubs
 vendor/etc/top_spk.wav
