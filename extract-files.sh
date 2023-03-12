@@ -65,9 +65,6 @@ function blob_fixup() {
         vendor/etc/camera/pureShot_parameter.xml)
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
-        vendor/etc/media_lahaina/video_system_specs.json)
-            sed -i "/max_retry_alloc_output_timeout/ s/10000/0/" "${2}"
-            ;;
         vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml)
             sed -i 's/system/system_ext/g' "${2}"
             ;;
