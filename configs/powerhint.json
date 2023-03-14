@@ -25,6 +25,24 @@
       "ResetOnInit": true
     },
     {
+      "Name": "CPULittleClusterUpRateLimit",
+      "Path": "/sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us",
+      "Values": [
+        "500",
+        "2000"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPULittleClusterDownRateLimit",
+      "Path": "/sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us",
+      "Values": [
+        "20000",
+        "2000"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "CPUBigClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
       "Values": [
@@ -51,6 +69,24 @@
       "ResetOnInit": true
     },
     {
+      "Name": "CPUBigClusterUpRateLimit",
+      "Path": "/sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us",
+      "Values": [
+        "500",
+        "2000"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBigClusterDownRateLimit",
+      "Path": "/sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us",
+      "Values": [
+        "10000",
+        "2000"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "CPUBigPlusClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq",
       "Values": [
@@ -72,6 +108,24 @@
         "1075200",
         "960000",
         "844800"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBigPlusClusterUpRateLimit",
+      "Path": "/sys/devices/system/cpu/cpu7/cpufreq/schedutil/up_rate_limit_us",
+      "Values": [
+        "500",
+        "2000"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBigPlusClusterDownRateLimit",
+      "Path": "/sys/devices/system/cpu/cpu7/cpufreq/schedutil/down_rate_limit_us",
+      "Values": [
+        "5000",
+        "2000"
       ],
       "ResetOnInit": true
     },
@@ -374,6 +428,42 @@
       "Node": "LLCCBWMinFreq",
       "Duration": 0,
       "Value": "3879"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "CPULittleClusterUpRateLimit",
+      "Duration": 0,
+      "Value": "500"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "CPULittleClusterDownRateLimit",
+      "Duration": 0,
+      "Value": "20000"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "CPUBigClusterUpRateLimit",
+      "Duration": 0,
+      "Value": "500"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "CPUBigClusterDownRateLimit",
+      "Duration": 0,
+      "Value": "10000"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "CPUBigPlusClusterUpRateLimit",
+      "Duration": 0,
+      "Value": "500"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "CPUBigPlusClusterDownRateLimit",
+      "Duration": 0,
+      "Value": "5000"
     },
     {
       "PowerHint": "LAUNCH",
