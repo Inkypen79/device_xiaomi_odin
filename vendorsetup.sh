@@ -5,5 +5,5 @@ then
     GREEN='\033[0;32m'
     NC='\033[0m'
     echo -e "${GREEN}Downloading clang 17.0${NC}"
-    git clone https://gitlab.com/inkypen/prebuilts_clang_host_linux-x86 -b ${CLANGVER} "${CLANGDIR}/${CLANGVER}"
+    git clone https://gitlab.com/inkypen/prebuilts_clang_host_linux-x86 -b ${CLANGVER} "${CLANGDIR}/${CLANGVER}" --depth=1
 fi
