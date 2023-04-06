@@ -1058,10 +1058,10 @@ vendor/lib64/libtinyxml2_1.so
 # Health
 vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-qti.so
 
-# HotwordEnrollment - from haydn V13.0.2.0.SKKMIXM
+# HotwordEnrollment - from venus V14.0.1.0.TKBMIXM
 product/etc/permissions/privapp-permissions-hotword.xml|6eeaaf4b9af803b470174dd37eaf37b6983afc17
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|b3c17357a9a6aaf796e9181742ba4865bcfcb517
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|e248de691af3b72630b4b062a46e302d82c7ec45
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|8ade0dc8f37d68d7e7deaf162cf8badded474673
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|ecb7a72da92f5fdbf8b842f6fd0043623f508f5e
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
 -system_ext/framework/com.android.hotwordenrollment.common.util.jar|c764b636e0be426a66be09dd08ab9c1921327ef0
 
