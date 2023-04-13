@@ -5,4 +5,4 @@ allow init proc_last_kmsg:file {
   setattr
 };
 
-allow init vendor_sysfs_scsi_host:file w_file_perms;
+allow init vendor_sysfs_mmc_host:file w_file_perms;
