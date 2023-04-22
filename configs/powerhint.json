@@ -5,8 +5,7 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1612800",
-        "1209600"
+        "1612800"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -16,10 +15,7 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "1612800",
-        "1401600",
         "1305600",
-        "1094400",
         "691200"
       ],
       "ResetOnInit": true
@@ -47,11 +43,7 @@
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1766400",
-        "1670400",
-        "1324800",
-        "1209600",
-        "1075200"
+        "1324800"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -62,8 +54,6 @@
       "Values": [
         "9999999",
         "1075200",
-        "960000",
-        "844800",
         "710400"
       ],
       "ResetOnInit": true
@@ -91,10 +81,7 @@
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
-        "1785600",
-        "1555200",
-        "1420800",
-        "1075200"
+        "1555200"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -104,9 +91,7 @@
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "1420800",
         "1075200",
-        "960000",
         "844800"
       ],
       "ResetOnInit": true
@@ -135,7 +120,6 @@
       "Values": [
         "0",
         "25",
-        "35",
         "50"
       ],
       "DefaultIndex": 0,
@@ -236,30 +220,11 @@
       "ResetOnInit": true
     },
     {
-      "Name": "CPUBWSampleMs",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/sample_ms",
-      "Values": [
-        "10",
-        "4"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPUBWIOPercent",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/io_percent",
-      "Values": [
-        "80",
-        "50"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "CPUBWMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/min_freq",
       "Values": [
         "12298",
         "9155",
-        "7110",
         "4577"
       ],
       "ResetOnInit": true
@@ -270,44 +235,7 @@
       "Values": [
         "6515",
         "3879",
-        "2597",
         "762"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "LLCCBWSampleMs",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/sample_ms",
-      "Values": [
-        "10",
-        "4"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "LLCCBWHistMemory",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/hist_memory",
-      "Values": [
-        "0",
-        "20"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "LLCCBWHystLength",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/hyst_length",
-      "Values": [
-        "0",
-        "10"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "LLCCBWHystTriggerCount",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/hyst_trigger_count",
-      "Values": [
-        "0",
-        "3"
       ],
       "ResetOnInit": true
     },
@@ -355,7 +283,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPUBigPlusClusterMaxFreq",
       "Duration": 0,
-      "Value": "1420800"
+      "Value": "1555200"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -421,7 +349,7 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBWMinFreq",
       "Duration": 0,
-      "Value": "7110"
+      "Value": "9155"
     },
     {
       "PowerHint": "INTERACTION",
@@ -571,7 +499,7 @@
       "PowerHint": "Flipendo",
       "Node": "CPUBigPlusClusterMaxFreq",
       "Duration": 0,
-      "Value": "1420800"
+      "Value": "1555200"
     }
   ]
 }
