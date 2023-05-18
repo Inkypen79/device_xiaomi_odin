@@ -2685,7 +2685,6 @@ vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
 vendor/etc/display/DPU720.xml
 vendor/etc/display/DPU7__.xml
-vendor/etc/excluded-input-devices.xml
 vendor/etc/face3d/qcnn_concat_file_model-0324_2_encrypted
 vendor/etc/factory_cmd_config/modem.xml
 vendor/etc/gpfspath_oem_config.xml
