@@ -1,0 +1,2 @@
+allow xiaomiparts_app vendor_sysfs_graphics:dir search;
+allow xiaomiparts_app vendor_sysfs_graphics:file rw_file_perms;
