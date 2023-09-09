@@ -452,7 +452,7 @@ PRODUCT_PACKAGES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.odin
+    vendor.lineage.touch@1.0-service.xiaomi
 
 # Touchscreen
 PRODUCT_COPY_FILES += \

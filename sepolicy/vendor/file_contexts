@@ -119,7 +119,7 @@
 /vendor/bin/touch_raw                                                        u:object_r:touchreport_exec:s0
 /vendor/bin/touch_report                                                     u:object_r:touchreport_exec:s0
 /vendor/bin/toucheventcheck                                                  u:object_r:touchreport_exec:s0
-/vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.odin                     u:object_r:hal_lineage_touch_default_exec:s0
+/vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi                   u:object_r:hal_lineage_touch_default_exec:s0
 /data/vendor/touch(/.*)?                                                     u:object_r:vendor_data_touchreport_file:s0
 /sys/devices/virtual/touch/touch_dev(/.*)?                                   u:object_r:vendor_sysfs_touch:s0
 /sys/devices/virtual/touch/tp_dev/double_tap                                 u:object_r:sysfs_touchpanel:s0
