@@ -23,7 +23,7 @@
 // Touchscreen and HBM
 #define FOD_HBM_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_hbm"
 #define FOD_STATUS_PATH "/sys/devices/virtual/touch/tp_dev/fod_status"
-#define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/fod_ui"
+#define FOD_UI_PATH "/sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/fod_ui"
 
 #define FOD_HBM_OFF 0
 #define FOD_HBM_ON 1
@@ -86,7 +86,7 @@ class XiaomiUdfpsHander : public UdfpsHandler {
     }
 
     void onFingerDown(uint32_t /*x*/, uint32_t /*y*/, float /*minor*/, float /*major*/) {
-        // nothing
+        set(FOD_STATUS_PATH, FOD_STATUS_ON);
     }
 
     void onFingerUp() {
