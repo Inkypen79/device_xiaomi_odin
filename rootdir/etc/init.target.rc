@@ -41,6 +41,10 @@ on early-init
     wait /sys/devices/soc0/soc_id
 
 on init
+    # Goodix fingerprint
+    chmod 0666 /dev/goodix_fp
+    chown system system /dev/goodix_fp
+
     # Scheduler uclamp
     mkdir /dev/cpuctl/foreground
     mkdir /dev/cpuctl/background
@@ -126,6 +130,10 @@ on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
+    # Goodix fingerprint
+    mkdir /data/vendor/goodix 0770 system system
+    mkdir /mnt/vendor/persist/goodix 0770 system system
+
     mkdir /vendor/data/tombstones 0771 system system
     chmod 0644 /dev/elliptic0
     chmod 0644 /dev/elliptic1
@@ -226,7 +234,14 @@ on early-boot
 
 on boot
     # Fingerprint sensor permissions
+    chown system system /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/fod_ui
     chown system system /sys/devices/virtual/touch/tp_dev/fod_state
+    chown system system /sys/devices/virtual/touch/tp_dev/fod_status
+    chown system system /sys/class/drm/card0-DSI-1/disp_param
+    chmod 0700 /sys/class/drm/card0-DSI-1/disp_param
+    chown system system /sys/class/drm/card0-DSI-1/panel_info
+    chmod 0700 /sys/class/drm/card0-DSI-1/panel_info
+    chmod 0666 /dev/input/event2
 
     chown system system /sys/class/thermal/thermal_message/sconfig
     chown system system /sys/class/thermal/thermal_message/balance_mode

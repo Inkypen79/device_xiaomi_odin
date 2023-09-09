@@ -33,7 +33,7 @@
 /vendor/bin/hw/vendor\.lineage\.fastcharge@1\.0-service\.odin                u:object_r:hal_lineage_fastcharge_default_exec:s0
 
 # Fingerprint
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.odin                                                u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi                                              u:object_r:hal_fingerprint_default_exec:s0
 
 # Fingerprint data
 /data/vendor/fpc(/.*)?                                                       u:object_r:vendor_fingerprint_data_file:s0
