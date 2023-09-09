@@ -356,7 +356,7 @@ PRODUCT_PACKAGES += \
 
 # Powershare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.odin
+    vendor.lineage.powershare@1.0-service.xiaomi
 
 # QMI
 PRODUCT_PACKAGES += \
