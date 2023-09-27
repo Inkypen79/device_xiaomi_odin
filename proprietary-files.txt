@@ -1044,9 +1044,6 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libtinyxml2_1.so
 
-# Health
-vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-qti.so
-
 # HotwordEnrollment - from venus V14.0.1.0.TKBMIXM
 product/etc/permissions/privapp-permissions-hotword.xml|6eeaaf4b9af803b470174dd37eaf37b6983afc17
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|8ade0dc8f37d68d7e7deaf162cf8badded474673
