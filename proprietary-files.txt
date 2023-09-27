@@ -2380,7 +2380,6 @@ vendor/bin/init.qcom.sdio.sh
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/init.qcom.sh
 vendor/bin/init.qti.chg_policy.sh
-vendor/bin/init.qti.display_boot.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/init.qti.media.sh
 vendor/bin/init.qti.qcv.sh
@@ -2494,7 +2493,6 @@ vendor/etc/init/hw/init.qcom.factory.rc
 vendor/etc/init/hw/init.qcom.usb.rc
 vendor/etc/init/hw/init.qti.kernel.rc
 vendor/etc/init/hw/init.xiaomi.camera.rc
-vendor/etc/init/init.qti.display_boot.rc
 vendor/etc/init/init.qti.fm.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/init/ims_rtp_daemon.rc

@@ -377,8 +377,10 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
+    init.qti.display_boot.sh \
     init.batterysecret.rc \
     init.qcom.rc \
+    init.qti.display_boot.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     fstab.qcom \
