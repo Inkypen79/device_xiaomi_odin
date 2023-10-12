@@ -59,6 +59,9 @@ function blob_fixup() {
             sed -i 's/version="2.0"/version="1.0"/g' "${2}"
             sed -i 's/system\/product/system_ext/g' "${2}"
             ;;
+        system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v33.so" "${2}"
+            ;;
         vendor/etc/camera/odin_motiontuning.xml)
             sed -i 's/xml=version/xml\ version/g' "${2}"
 	    ;;
