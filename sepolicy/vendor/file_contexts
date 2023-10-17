@@ -88,7 +88,7 @@
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@4\.0-service                  u:object_r:hal_misys_default_exec:s0
 
 # NFC
-/vendor/bin/hw/android\.hardware\.nfc_snxxx@1\.2-service                     u:object_r:hal_nfc_default_exec:s0
+/vendor/bin/hw/android\.hardware\.nfc-service\.nxp                           u:object_r:hal_nfc_default_exec:s0
 
 # Otrp
 /vendor/bin/vendor\.xiaomi\.hardware\.otrpagent@1\.0-service                 u:object_r:hal_otrpagent_default_exec:s0
