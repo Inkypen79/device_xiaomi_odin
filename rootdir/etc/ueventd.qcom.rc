@@ -361,6 +361,7 @@ subsystem mi_display
 /dev/ramdump*             0640   system     system
 
 # Fingerprint device
+/dev/goodix_fp            0660   system     system
 /dev/qbt*                 0660   system     system
 /sys/class/fts/touch_aoi aoi_set 0660 root system
 /sys/class/fts/touch_aoi power_set 0660 root system
