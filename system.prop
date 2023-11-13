@@ -134,8 +134,6 @@ ro.product.property_source_order=odm,vendor,product,system_ext,system
 debug.stagefright.ccodec=1
 #Property to set native recorder's maximum base layer fps
 ro.media.recorder-max-base-layer-fps=60
-#Battery Property
-ro.charger.enable_suspend=1
 #Disable MTE Async for system server
 arm64.memtag.process.system_server=off
 # Disable blur on app launch
