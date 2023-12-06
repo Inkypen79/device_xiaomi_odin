@@ -230,4 +230,3 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit proprietary blobs
 include vendor/xiaomi/odin/BoardConfigVendor.mk
--include vendor/xiaomi/odin-firmware/BoardConfigVendor.mk
