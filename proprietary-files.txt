@@ -1,4 +1,4 @@
-# These proprietary files are extracted from Xiaomi MIX 4 (odin) Android 13 MIUI V14.0.3.0.TKMCNXM, unless pinned
+# These proprietary files are extracted from Xiaomi MIX 4 (odin) Android 13 MIUI V14.0.8.0.TKMCNXM, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
@@ -313,6 +313,7 @@ vendor/lib64/libcvp_util.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # Camera
+-system_ext/framework/camerax-vendor-extensions.jar
 vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
 vendor/etc/camera/mibokeh/add_concat_quantize_encry.dlc
 vendor/etc/camera/mibokeh/model_dxo.dlc
@@ -533,10 +534,8 @@ vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so|75048fd3ee11ab6a2892ebd93dcd0fd086684677
 vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0.so
-
-# Camera - from MIUI V13.0.8.0.SKMCNXM
-vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0-service-impl.so|07ba26ea80e37829517b803f3117f084e11e3734
-vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0.so|f9d8d630909c4734fef4693406ae87079fed3e1d
+vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0-service-impl.so
+vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
 
 # Camera-arcsoft
 vendor/lib64/libarcsoft_beautyshot.so
@@ -1383,7 +1382,6 @@ vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 # Radio
 etc/permissions/privapp-permissions-qti.xml
 etc/sysconfig/qti_whitelist.xml
--system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/embms/embms.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/embms.xml
@@ -2083,11 +2081,9 @@ system_ext/etc/sysconfig/power-save-conf.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 -system_ext/framework/ActivityExt.jar
--system_ext/framework/camerax-vendor-extensions.jar
 -system_ext/framework/com.qti.media.secureprocessor.jar
 -system_ext/framework/extphonelib.jar
 -system_ext/framework/global-cleaner-empty.jar
--system_ext/framework/gson.jar
 -system_ext/framework/mirilhook.jar
 -system_ext/framework/mirilmsgtunnel.jar
 -system_ext/framework/qmapbridge.jar
@@ -2368,7 +2364,6 @@ vendor/bin/dppdaemon
 vendor/bin/dspservice
 vendor/bin/embmsslServer
 vendor/bin/f2player
-vendor/bin/feature_enabler_client
 vendor/bin/ffu
 vendor/bin/fmconfig
 vendor/bin/fmfactorytest
@@ -2507,7 +2502,6 @@ vendor/etc/init/dataqti.rc
 vendor/etc/init/diagcommd.rc
 vendor/etc/init/dpmQmiMgr.rc
 vendor/etc/init/exfat.rc
-vendor/etc/init/feature_enabler_client.rc
 vendor/etc/init/ffu.rc
 vendor/etc/init/hw/init.qcom.factory.rc
 vendor/etc/init/hw/init.qcom.usb.rc
