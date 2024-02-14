@@ -313,12 +313,16 @@ vendor/lib64/libcvp_util.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # Camera
+vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
 vendor/etc/camera/mibokeh/add_concat_quantize_encry.dlc
 vendor/etc/camera/mibokeh/model_dxo.dlc
 vendor/etc/camera/mibokeh/portrait_blur_800_quan_encry-softmax.dlc
 vendor/etc/camera/mibokeh_855_opencl.bin
 vendor/etc/camera/mibokeh_855_parameter.bin
 vendor/etc/camera/model_front_mibokeh_video.dlc
+vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
+vendor/lib64/android.hardware.camera.provider@2.4-external.so
+vendor/lib64/android.hardware.camera.provider@2.4-legacy.so
 vendor/lib64/camera/com.qti.eeprom.odin_ofilm_ov13b10_gt24p64b_ultra_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.odin_semco_s5khmx_p24c128f_wide_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.odin_sunny_hi847_gt24p128c_tele5x_eeprom.so
@@ -438,6 +442,7 @@ vendor/lib64/camera/plugins/com.xiaomi.plugin.skinbeautifier.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.sr.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.supermoon.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.supernight.so
+vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/camera.xiaomi.so|768c7b267fccc5c2c47a800161d7e58759e77f2b
 vendor/lib64/hw/com.qti.chi.override.so|ebe856c54b32e8cd056b8d381cbb4fa33e5d4e75
@@ -503,8 +508,10 @@ vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libvidhance.so
+vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.device@3.5.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so|75048fd3ee11ab6a2892ebd93dcd0fd086684677
 vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0.so
 

@@ -673,15 +673,3 @@ service fan_control_turn_off /vendor/bin/fan_control 0
     user root
     disabled
     oneshot
-
-service vendor.camera-provider-2-4 /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
-    override
-    interface android.hardware.camera.provider@2.4::ICameraProvider legacy/0
-    interface vendor.qti.hardware.camera.postproc@1.0::IPostProcService camerapostprocservice
-    class hal
-    user cameraserver
-    group audio camera input drmrpc oem_2907
-    ioprio rt 4
-    capabilities SYS_NICE
-    writepid /dev/cpuset/camera-daemon/tasks /dev/stune/foreground/tasks
-    writepid /dev/memcg/camera/provider/cgroup.procs
