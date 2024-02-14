@@ -323,6 +323,14 @@ vendor/etc/camera/model_front_mibokeh_video.dlc
 vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
 vendor/lib64/android.hardware.camera.provider@2.4-external.so
 vendor/lib64/android.hardware.camera.provider@2.4-legacy.so
+vendor/lib64/camera.device@1.0-impl.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-external-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib64/camera.device@3.5-external-impl.so
+vendor/lib64/camera.device@3.5-impl.so
+vendor/lib64/camera.device@3.6-external-impl.so
 vendor/lib64/camera/com.qti.eeprom.odin_ofilm_ov13b10_gt24p64b_ultra_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.odin_semco_s5khmx_p24c128f_wide_eeprom.so
 vendor/lib64/camera/com.qti.eeprom.odin_sunny_hi847_gt24p128c_tele5x_eeprom.so
