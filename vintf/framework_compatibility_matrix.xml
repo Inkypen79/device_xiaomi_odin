@@ -619,14 +619,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.perf</name>
-        <version>2.0-3</version>
-        <interface>
-            <name>IPerf</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.power.powermodule</name>
         <version>1.0</version>
         <interface>
@@ -1045,27 +1037,11 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.qti.memory.pasrmanager</name>
-        <version>1.0-1</version>
-        <interface>
-            <name>IPasrManager</name>
-            <instance>pasrhal</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.qti.mstatservice</name>
         <version>1.0</version>
         <interface>
             <name>IMStatService</name>
             <instance>mstatservice</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.power.pasrmanager</name>
-        <version>1.0</version>
-        <interface>
-            <name>IPasrManager</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
