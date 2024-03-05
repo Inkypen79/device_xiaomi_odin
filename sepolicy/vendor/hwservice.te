@@ -33,3 +33,5 @@ type vendor_hal_camerapostproc_xiaomi_hwservice, hwservice_manager_type;
 type vendor_hal_citsensorservice_xiaomi_hwservice, hwservice_manager_type;
 
 type vendor_hal_fsalsps_hwservice, hwservice_manager_type;
+
+type vendor_qx_oss_hwservice, hwservice_manager_type;
