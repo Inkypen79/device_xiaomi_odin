@@ -3,7 +3,6 @@ genfscon sysfs /devices/platform/soc/998000.i2c/i2c-0/0-005a/f0_value           
 
 # Extcon sysfs
 genfscon sysfs /devices/platform/soc/soc:extcon_usb1/extcon                                                                         u:object_r:sysfs_extcon:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/extcon                            u:object_r:sysfs_extcon:s0
 
 # Wakeup source stats
 genfscon sysfs /devices/platform/soc/17300000.qcom,lpass/subsys6/wakeup                                                             u:object_r:sysfs_wakeup:s0
