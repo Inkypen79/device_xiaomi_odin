@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <SwitchPreference
+    <SwitchPreferenceCompat
         android:key="dc_dimming_enable"
         android:defaultValue="false"
         android:icon="@drawable/ic_dcdimming"
