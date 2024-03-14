@@ -120,10 +120,11 @@ class XiaomiUdfpsHander : public UdfpsHandler {
         if (result == FINGERPRINT_ACQUIRED_GOOD) {
             set(FOD_HBM_PATH, FOD_HBM_OFF);
             set(FOD_STATUS_PATH, FOD_STATUS_OFF);
-        } else if (vendorCode == 21 || vendorCode == 23) {
+        } else if (vendorCode == 21) {
             /*
-             * vendorCode = 21 waiting for fingerprint authentication
-             * vendorCode = 23 waiting for fingerprint enroll
+             * vendorCode = 21 waiting for finger
+             * vendorCode = 22 finger down
+             * vendorCode = 23 finger up
              */
             set(FOD_STATUS_PATH, FOD_STATUS_ON);
         }
