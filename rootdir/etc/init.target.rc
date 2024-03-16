@@ -375,6 +375,10 @@ on boot
     chown system system /sys/class/qcom-battery/reverse_chg_mode
     chmod 0644 /sys/class/qcom-battery/reverse_chg_mode
 
+    # VPP tuning
+    chown system system /mnt/vendor/persist/vpp/tunings.txt
+    chmod 0666 /mnt/vendor/persist/vpp/tunings.txt
+
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 
