@@ -284,7 +284,7 @@ system_ext/lib64/vendor.qti.hardware.data.lce@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.lceaidlservice-V1-ndk.so
 system_ext/lib64/vendor.qti.hardware.data.qmi@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.qmiaidlservice-V1-ndk.so
--vendor/app/CneApp/CneApp.apk
+-vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
 -vendor/app/IWlanService/IWlanService.apk
 vendor/bin/cnd
 vendor/etc/cne/mwqem.conf
