@@ -311,6 +311,16 @@
         ""
       ],
       "Type": "Property"
+    },
+    {
+      "Name": "DoubleTapToWake",
+      "Path": "/sys/devices/virtual/touch/tp_dev/double_tap",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
     }
   ],
   "Actions": [
@@ -589,6 +599,12 @@
       "Node": "CPUBigPlusClusterMaxFreq",
       "Duration": 0,
       "Value": "1555200"
+    },
+    {
+      "PowerHint": "DOUBLE_TAP_TO_WAKE",
+      "Node": "DoubleTapToWake",
+      "Duration": 0,
+      "Value": "1"
     }
   ]
 }
