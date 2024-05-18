@@ -972,3 +972,7 @@ service hapticGetEvent /system/bin/getevent
     user root
     group root
     disabled
+
+on property:sys.boot_completed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
