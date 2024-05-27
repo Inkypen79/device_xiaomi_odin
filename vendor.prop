@@ -759,3 +759,6 @@ persist.sys.miui.sys_monitor=am.ActivityManagerService,wm.WindowManagerGlobalLoc
 #
 debug.renderengine.backend=skiaglthreaded
 persist.vendor.recovery_update=false
+
+# Silence minksocket logs
+persist.log.tag.minksocket=S
