@@ -1655,7 +1655,6 @@ system_ext/lib64/vendor.qti.ims.rcsuceaidlservice-V1-ndk.so
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
--system_ext/priv-app/ims/ims.apk
 vendor/bin/ims_rtp_daemon
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
@@ -1695,6 +1694,9 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+
+# IMS - from LA.QSSI.14.0.r1-13500-qssi.0
+-system_ext/priv-app/ims/ims.apk|eb896ad88f5c4d7ae26f6474e7fe4ccff8cc1efd
 
 # SCVE
 vendor/lib/libscveCommon.so
