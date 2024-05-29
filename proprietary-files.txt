@@ -1157,12 +1157,12 @@ vendor/lib64/libsdm-color.so|a83576915a146492d430711e273b9af9a95d4fed
 vendor/lib64/libsdm-diag.so|393c9ad3e3ad3210515900627f65bf6e3633226e
 vendor/lib64/libsdmextension.so|4c32026ff8cb1270081881d4def7a2ad05ad0b80
 
-# HotwordEnrollment - from venus V14.0.1.0.TKBMIXM
+# HotwordEnrollment - from xiaomi.eu_ODIN_OS1.0.2.0.UKMCNXM_14
 product/etc/permissions/privapp-permissions-hotword.xml|6eeaaf4b9af803b470174dd37eaf37b6983afc17
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|8ade0dc8f37d68d7e7deaf162cf8badded474673
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|ecb7a72da92f5fdbf8b842f6fd0043623f508f5e
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
--system_ext/framework/com.android.hotwordenrollment.common.util.jar|c764b636e0be426a66be09dd08ab9c1921327ef0
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk|d4a586c6b3df847e3467cb867aca7e49899fbbbe
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk|1422fd06f757f006cc81a8993cac688e483836fd
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|99cfd80965c170f4885a7dd62c0eaad1a0c7840f
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar|b768584073c6348713ffd0139d44039c9efc775a
 
 # IPA-Firmware
 vendor/firmware/ipa_fws.b00
