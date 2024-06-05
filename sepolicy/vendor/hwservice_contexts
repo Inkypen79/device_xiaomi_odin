@@ -9,32 +9,20 @@ vendor.xiaomi.hardware.dtool::IDtool                                            
 vendor.xiaomi.hardware.fingerprintextension::IXiaomiFingerprint                      u:object_r:hal_fingerprint_hwservice:s0
 vendor.xiaomi.hardware.fx.tunnel::IMiFxTunnel                                        u:object_r:hal_fingerprint_hwservice:s0
 
-# Mlipay
-vendor.xiaomi.hardware.mlipay::IMlipayService                                        u:object_r:hal_mlipay_hwservice:s0
-
 #
 com.qxwz.account::IQxwzAccount                                                       u:object_r:vendor_qx_oss_hwservice:s0
-
-#
-vendor.fs.fsalsps::IFsAlsps                                                          u:object_r:vendor_hal_fsalsps_hwservice:s0
 
 #
 vendor.qti.sla.service::ISlaService                                                  u:object_r:hal_slaservice_hwservice:s0
 
 # Xiaomi
-vendor.xiaomi.cit.bluetooth::IBluetoothService                                       u:object_r:hal_cit_bluetooth_hwservice:s0
-vendor.xiaomi.cit.wifi::IWifiService                                                 u:object_r:hal_cit_wifi_hwservice:s0
 vendor.xiaomi.hardware.cameraperf::IMiCameraPerfService                              u:object_r:vendor_hal_cameraperf_hwservice:s0
 vendor.xiaomi.hardware.campostproc::IMiPostProcService                               u:object_r:vendor_hal_camerapostproc_xiaomi_hwservice:s0
 vendor.xiaomi.hardware.citsensorservice::ICitSensorService                           u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0
-vendor.xiaomi.hardware.cld::ICld                                                     u:object_r:hal_health_storage_hwservice:s0
 vendor.xiaomi.hardware.mfidoca::IFidoService                                         u:object_r:hal_mfidoca_hwservice:s0
-vendor.xiaomi.hardware.micharge::IMiCharge                                           u:object_r:hal_micharge_hwservice:s0
-vendor.xiaomi.hardware.misecurity::IMiSecurity                                       u:object_r:hal_misecurity_hwservice:s0
 vendor.xiaomi.hardware.misys::IMiSys                                                 u:object_r:hal_misys_hwservice:s0
 vendor.xiaomi.hardware.mlipay::IMlipayService                                        u:object_r:hal_mlipay_hwservice:s0
 vendor.xiaomi.hardware.mtdservice::IMTService                                        u:object_r:hal_mtdservice_hwservice:s0
-vendor.xiaomi.hardware.otrpagent::IOTrPAgent                                         u:object_r:hal_otrpagent_hwservice:s0
 vendor.xiaomi.hardware.tidaservice::ITidaService                                     u:object_r:hal_tidaservice_hwservice:s0
 vendor.xiaomi.hardware.vsimapp::IVSIMService                                         u:object_r:hal_vsimapp_hwservice:s0
 vendor.xiaomi.uwb::IUwb                                                              u:object_r:hal_uwb_hwservice:s0

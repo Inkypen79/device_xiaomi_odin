@@ -1,8 +1,6 @@
 # Bluetooth
 persist.vendor.btstack.                     u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.bt.                          u:object_r:vendor_bluetooth_prop:s0
-vendor.bluetooth.wdsdaemon.enabled          u:object_r:vendor_cit_bluetooth_sub_prop:s0
-vendor.bluetooth.startwdsdaemon             u:object_r:vendor_cit_bluetooth_sub_prop:s0
 
 # Camera
 persist.camera.                             u:object_r:vendor_camera_prop:s0

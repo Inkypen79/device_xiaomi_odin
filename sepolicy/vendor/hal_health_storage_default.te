@@ -1,1 +1,0 @@
-allow hal_health_storage_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;

@@ -1,9 +1,6 @@
 # Audio
 /dev/socket/audio_hw_socket                                                  u:object_r:audio_socket:s0
 
-# Bluetooth
-/vendor/bin/hw/vendor\.xiaomi\.cit\.bluetooth@1\.0-service                   u:object_r:hal_cit_bluetooth_default_exec:s0
-
 # Camera
 /mnt/vendor/persist/camera(/.*)?                                             u:object_r:vendor_persist_camera_file:s0
 /vendor/lib(64)?/libipebpsstriping\.so                                       u:object_r:same_process_hal_file:s0
@@ -48,10 +45,6 @@
 /sys/devices/virtual/touch/tp_dev/fod_state                                  u:object_r:vendor_sysfs_fod:s0
 /sys/devices/virtual/touch/tp_dev/fod_status                                 u:object_r:vendor_sysfs_fod:s0
 
-# Fsalsps
-/vendor/bin/hw/vendor\.fs\.fsalsps@1\.0-service                              u:object_r:vendor_hal_fsalsps_default_exec:s0
-/mnt/vendor/persist/fortsense(/.*)?                                          u:object_r:fsalsps_data_file:s0
-
 # Graphics nodes
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/disp_param                            u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/hbm_status                            u:object_r:vendor_sysfs_graphics:s0
@@ -59,13 +52,10 @@
 
 # Hals
 /vendor/bin/fidoca                                                           u:object_r:hal_mfidoca_default_exec:s0
-/vendor/bin/misecurityd@1\.0                                                 u:object_r:hal_misecurity_default_exec:s0
 /vendor/bin/mlipayd@1\.1                                                     u:object_r:hal_mlipay_default_exec:s0
 /vendor/bin/mtd@1\.3                                                         u:object_r:hal_mtdservice_default_exec:s0
 /vendor/bin/tidad@1.2                                                        u:object_r:hal_tidaservice_default_exec:s0
 /vendor/bin/vsimd                                                            u:object_r:hal_vsimapp_default_exec:s0
-/vendor/bin/hw/vendor\.xiaomi\.hardware\.cld@1\.0-service                    u:object_r:hal_health_storage_default_exec:s0
-/vendor/bin/hw/vendor\.xiaomi\.hardware\.dtool@1\.0-service                  u:object_r:vendor_dtool_exec:s0
 
 # I/O
 /sys/block/dm-[a-z0-9]+/queue/read_ahead_kb                                  u:object_r:vendor_sysfs_mmc_host:s0
@@ -73,13 +63,6 @@
 /sys/block/mmcblk0rpmb/bdi/read_ahead_kb                                     u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices(/.*)?/block/(dm-|mmcblk|sd)[a-z0-9]+/queue/read_ahead_kb        u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices/virtual/block/dm-[a-z0-9]+/queue/read_ahead_kb                  u:object_r:vendor_sysfs_mmc_host:s0
-
-# Media
-/vendor/bin/hw/dolbycodec2                                                   u:object_r:mediacodec_exec:s0
-/vendor/bin/hw/vendor\.ozoaudio\.media\.c2@1\.0-service                      u:object_r:mediacodec_exec:s0
-
-# Micharge
-/vendor/bin/hw/vendor\.xiaomi\.hardware\.micharge@1\.0-service               u:object_r:hal_micharge_default_exec:s0
 
 # Misys
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@1\.0-service                  u:object_r:hal_misys_default_exec:s0
@@ -89,11 +72,6 @@
 
 # NFC
 /vendor/bin/hw/android\.hardware\.nfc-service\.nxp                           u:object_r:hal_nfc_default_exec:s0
-
-# Otrp
-/vendor/bin/vendor\.xiaomi\.hardware\.otrpagent@1\.0-service                 u:object_r:hal_otrpagent_default_exec:s0
-/vendor/bin/vendor\.xiaomi\.hardware\.otrpagent@2\.0-service                 u:object_r:hal_otrpagent_default_exec:s0
-/data/vendor/otrp(/.*)?                                                      u:object_r:otrp_data_file:s0
 
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                             u:object_r:persist_subsys_file:s0
@@ -143,7 +121,6 @@
 /sys/devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,battery_charger/power_supply/wireless                u:object_r:vendor_sysfs_battery_supply:s0
 
 # Wlan
-/vendor/bin/hw/vendor\.xiaomi\.cit\.wifi@1\.0-service                        u:object_r:hal_cit_wifi_default_exec:s0
 /vendor/bin/nv_mac                                                           u:object_r:vendor_wcnss_service_exec:s0
 /data/vendor/mac_addr(/.*)?                                                  u:object_r:vendor_wifi_vendor_data_file:s0
 /data/vendor/wlan_logs(/.*)?                                                 u:object_r:vendor_wifi_vendor_log_data_file:s0
