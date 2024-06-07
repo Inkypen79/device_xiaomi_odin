@@ -1,0 +1,9 @@
+type uwb_info, domain;
+type uwb_info_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(uwb_info)
+
+allow uwb_info init:unix_stream_socket connectto;
+allow uwb_info mnt_vendor_file:dir search;
+allow uwb_info mnt_vendor_file:file { getattr open read };
+allow uwb_info property_socket:sock_file write;
+allow uwb_info vendor_uwb_prop:property_service set;

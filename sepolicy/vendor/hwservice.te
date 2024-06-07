@@ -12,8 +12,6 @@ type hal_slaservice_hwservice, hwservice_manager_type;
 
 type hal_tidaservice_hwservice, hwservice_manager_type;
 
-type hal_uwb_hwservice, hwservice_manager_type;
-
 type hal_vsimapp_hwservice, hwservice_manager_type;
 
 type vendor_hal_cameraperf_hwservice, hwservice_manager_type;

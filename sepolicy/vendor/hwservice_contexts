@@ -25,4 +25,3 @@ vendor.xiaomi.hardware.mlipay::IMlipayService                                   
 vendor.xiaomi.hardware.mtdservice::IMTService                                        u:object_r:hal_mtdservice_hwservice:s0
 vendor.xiaomi.hardware.tidaservice::ITidaService                                     u:object_r:hal_tidaservice_hwservice:s0
 vendor.xiaomi.hardware.vsimapp::IVSIMService                                         u:object_r:hal_vsimapp_hwservice:s0
-vendor.xiaomi.uwb::IUwb                                                              u:object_r:hal_uwb_hwservice:s0

@@ -76,14 +76,6 @@ on init
     chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     start logd
 
-    #add uwb node
-    mkdir /data/uwb 0777 uwb uwb
-    mkdir /data/vendor 0777 uwb uwb
-    mkdir /data/vendor/uwb 0777 uwb uwb
-    mkdir /data/vendor/uwb/param 0777 uwb uwb
-    chmod 0660 /dev/sr100
-    chown uwb uwb /dev/sr100
-
 on early-fs
     start vold
     exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ cnss2 icnss2
@@ -233,6 +225,14 @@ on early-boot
     chmod 0202 /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/data_stall
 
 on boot
+    #add uwb node
+    mkdir /data/vendor 0777 system system
+    mkdir /data/vendor/uwb 0777 system system
+    mkdir /data/vendor/uwb/param 0777 system system
+    chmod 0660 /dev/sr100
+    chown system system /dev/sr100
+    symlink /dev/sr100 /dev/srxxx
+
     # Fingerprint sensor permissions
     chown system system /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/fod_ui
     chown system system /sys/devices/virtual/touch/tp_dev/fod_state

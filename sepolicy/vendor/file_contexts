@@ -106,9 +106,8 @@
 /vendor/bin/init\.mi\.usb\.sh                                                u:object_r:vendor_qti_init_shell_exec:s0
 
 # UWB
-/vendor/bin/hw/vendor\.xiaomi\.uwb@1\.0-service                              u:object_r:hal_uwb_default_exec:s0
-/vendor/bin/pnscr_uwb                                                        u:object_r:hal_uwb_default_exec:s0
-/data/uwb(/.*)?                                                              u:object_r:uwb_data_file:s0
+/vendor/bin/hw/android\.hardware\.uwb-service\.nxp                           u:object_r:hal_uwb_default_exec:s0
+/vendor/bin/pnscr_uwb                                                        u:object_r:uwb_info_exec:s0
 /data/vendor/uwb(/.*)?                                                       u:object_r:uwb_vendor_data_file:s0
 
 # Vibrator
