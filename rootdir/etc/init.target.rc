@@ -445,7 +445,6 @@ service audioshell_service /vendor/bin/audioshell_service
 on property:ro.vendor.miui.region=*
    start audioshell_service
 
-
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
@@ -662,6 +661,10 @@ on property:sys.lmkd.memory.start_reclaim_in_cam_boost=1
 # gps Sync attribute value between system and vendor
 on property:persist.sys.mcc.mnc=*
     setprop persist.vendor.mcc.mnc ${persist.sys.mcc.mnc}
+
+on property:sys.boot_completed=1
+    # Disable native stats collection service
+    stop statsd
 
 #fan-controller
 service fan_control_turn_on /vendor/bin/fan_control 1
