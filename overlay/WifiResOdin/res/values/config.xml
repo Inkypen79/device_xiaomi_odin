@@ -85,4 +85,7 @@
     <!-- Integer for WiFi Partial scan results fetching period (in ms). -->
     <integer name="config_wifi_partial_scan_results_fetching_period_ms">1000</integer>
 
+    <!-- Default access point SSID used for tethering -->
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Xiaomi MIX 4</string>
+
 </resources>

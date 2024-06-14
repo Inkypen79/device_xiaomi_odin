@@ -16,6 +16,7 @@ cc_library_static {
     name: "libinit_odin",
     srcs: [
         "libinit_dalvik_heap.cpp",
+        "libinit_device_names.cpp",
         "libinit_snet_props.cpp",
         "libinit_utils.cpp",
     ],
