@@ -65,6 +65,9 @@ function blob_fixup() {
         vendor/etc/camera/pureShot_parameter.xml)
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
+        vendor/etc/media_codecs.xml|vendor/etc/media_codecs_lahaina.xml|vendor/etc/media_codecs_system_default_lahaina.xml)
+            sed -Ei "/media_codecs_(google_audio|google_telephony|vendor_audio)/d" "${2}"
+            ;;
         vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml)
             sed -i 's/system/system_ext/g' "${2}"
             ;;
