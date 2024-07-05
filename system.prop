@@ -130,8 +130,6 @@ persist.backup.ntpServer="0.pool.ntp.org"
 persist.vendor.sensors.enable.mag_filter=true
 #Partition source order for Product/Build properties pickup.
 ro.product.property_source_order=odm,vendor,product,system_ext,system
-#Property to enable Codec2 for audio and OMX for Video
-debug.stagefright.ccodec=1
 #Property to set native recorder's maximum base layer fps
 ro.media.recorder-max-base-layer-fps=60
 #Disable MTE Async for system server
