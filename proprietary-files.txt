@@ -1,4 +1,4 @@
-# These proprietary files are extracted from Xiaomi MIX 4 (odin) Android 14 HyperOS V1.0.2.0.UKMCNXM, unless pinned
+# These proprietary files are extracted from Xiaomi MIX 4 (odin) Android 14 HyperOS V1.0.3.0.UKMCNXM, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd
@@ -2600,7 +2600,6 @@ system_ext/lib64/vendor.qti.qesdhal@1.2.so
 system_ext/lib64/vendor.qti.qesdhalaidl-V2-ndk.so
 system_ext/lib64/vendor.qti.qspmhal-V1-ndk.so
 system_ext/lib64/vendor.qti.qspmhal@1.0.so
--system_ext/priv-app/CarrierConfig/CarrierConfig.apk
 -system_ext/priv-app/com.qualcomm.location/com.qualcomm.location.apk
 -system_ext/priv-app/com.qualcomm.qti.services.systemhelper/com.qualcomm.qti.services.systemhelper.apk
 -system_ext/priv-app/dcf/dcf.apk

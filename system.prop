@@ -97,8 +97,6 @@ ro.nfc.port=I2C
 sys.qca1530=detect
 #Enable stm events
 persist.debug.coresight.config=stm-events
-# Disable ftrace by default
-persist.debug.ftrace_events_disable=Yes
 #hwui properties
 ro.hwui.texture_cache_size=72
 ro.hwui.layer_cache_size=48
@@ -139,17 +137,15 @@ ro.launcher.blur.appLaunch=0
 #button jack mode & switch
 persist.audio.button_jack.profile=volume
 persist.audio.button_jack.switch=0
-#enable speed install
-#ro.miui.pm.install.speedinstall=/data/apk-tmp
-#enable ramdump
-persist.vendor.ssr.enable_ramdumps=1
-#Performance disable iorapd
-ro.iorapd.enable=false
+#enable modem dump
+persist.vendor.ssr.enable_ramdumps=0
 #Property for BLUR
 persist.sys.sf.disable_blurs=1
 ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
-# property for fuse passthrough
+# support night charge property
+persist.vendor.night.charge=true
+# support fuse passthrough
 persist.sys.fuse.passthrough.enable=true
 # nokia audio room for vts
 #persist.vendor.audio.ozo.codec.enable=true

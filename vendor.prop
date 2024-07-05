@@ -93,6 +93,13 @@ ro.vendor.display.touch.idle.enable=true
 
 #prop for thermal
 ro.vendor.fps.switch.thermal=true
+
+# prop for disable frame_rate_override
+ro.surface_flinger.enable_frame_rate_override=false
+
+# enable dolbyvision
+#ro.vendor.display.dolbyvision.support=true
+
 #
 # from device/xiaomi/sm8350_common/common_ro.prop
 #
@@ -419,9 +426,6 @@ ro.build.ab_update=true
 #
 # ADDITIONAL VENDOR BUILD PROPERTIES
 #
-ro.board.first_api_level=30
-ro.board.api_level=30
-ro.rom.zone=1
 ro.control_privapp_permissions=enforce
 persist.vendor.qcomsysd.enabled=1
 keyguard.no_require_sim=true
@@ -435,8 +439,6 @@ ro.vendor.beluga.t=0x240
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000
 wifi.aware.interface=wifi-aware0
-#persist.vendor.cnss_diag.enable=true
-#persist.vendor.tcpdump.enable=true
 ro.hardware.wlan.vendor=qcom
 ro.hardware.wlan.chip=685x
 ro.hardware.wlan.mimo=1
@@ -541,7 +543,7 @@ ro.vendor.audio.dump.mixer=false
 persist.audio.button_jack.profile=volume
 persist.audio.button_jack.switch=0
 ro.vendor.audio.sfx.earadj=true
-ro.vendor.audio.sfx.scenario=true
+ro.vendor.audio.sfx.scenario=false
 ro.vendor.audio.spk.clean=true
 vendor.audio.spkcal.copy.inhal=true
 ro.config.vc_call_vol_steps=15
@@ -553,9 +555,10 @@ ro.vendor.audio.afe.record=true
 ro.vendor.audio.notify5Point1InUse=true
 ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.youme.support=true
-ro.vendor.audio.voice.change.version=1
+ro.vendor.audio.voice.change.version=2
 ro.incremental.enable=yes
 persist.radio.multisim.config=dsds
+persist.vendor.radio.ecc_cloud=true
 persist.vendor.qfp=false
 ro.vendor.qspm.enable=true
 persist.vendor.radio.enableadvancedscan=true
@@ -583,6 +586,7 @@ persist.sys.sf.color_mode=0
 debug.sf.hw=0
 debug.egl.hw=0
 debug.sf.latch_unsignaled=1
+debug.sf.auto_latch_unsignaled=0
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.mdpcomp.logs=0
 vendor.gralloc.disable_ubwc=0
@@ -615,6 +619,7 @@ persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.sib16_support=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.procedure_bytes=SKIP
+persist.vendor.radio.rat_on=combine
 vendor.usb.diag.func.name=ffs
 vendor.usb.use_ffs_mtp=1
 ro.vendor.touchfeature.type=183
@@ -720,7 +725,6 @@ sys.haptic.scroll.edge=7,0
 sys.haptic.trigger.drawer=2,0
 sys.haptic.hold=4,0
 sys.haptic.runin=13
-ro.vendor.audio.us.proximity_waitfornegative_feature=true
 ro.hardware.fp.fod=true
 persist.vendor.sys.fp.fod.location.X_Y=438,1701
 persist.vendor.sys.fp.fod.size.width_height=202,202
