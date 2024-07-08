@@ -950,6 +950,7 @@ vendor/firmware/spk2_playback_delta.txt
 vendor/firmware/spk2_voice_delta.txt
 vendor/firmware/stm_fts_production_limits.csv
 vendor/firmware/st_fts_k8.ftb
+vendor/firmware/st_fts_k8.ftb:vendor_ramdisk/lib/firmware/st_fts_k8.ftb
 vendor/firmware/uwb/libsr100t_prod_factory_fw.bin
 vendor/firmware/uwb/libsr100t_prod_fw.bin
 vendor/firmware/vpu20_1v.b00
