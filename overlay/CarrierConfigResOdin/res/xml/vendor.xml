@@ -129,6 +129,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
         <!-- AOSPA Edit: Enable LTE+ icon globally -->
         <boolean name="hide_lte_plus_data_icon_bool" value="false" />
+        <!-- Edit: Enable Vo5G options -->
+        <boolean name="vonr_enabled_bool" value="true"/>
+        <boolean name="vonr_setting_visibility_bool" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="001" mnc="01">
