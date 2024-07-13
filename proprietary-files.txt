@@ -848,6 +848,17 @@ vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.factory@1.0.so
 vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
+# Feature-enabler Firmware - from MIUI V13.0.8.0.SKMCNXM
+vendor/firmware/featenabler.b00|723f686111824c08bb36830fa7242c7a26fdbb16
+vendor/firmware/featenabler.b01|65d99c3f48bd7937b5dbfcfeb25d55c730c7575b
+vendor/firmware/featenabler.b02|6b2d982b0121905ffd19f14a453a512aaa1e033a
+vendor/firmware/featenabler.b03|bee8a3b767bb83547b49abcb406ae3e634b33daf
+vendor/firmware/featenabler.b04|d042d70bdc690f04b88622c90d5d0662c31b486a
+vendor/firmware/featenabler.b05|01570a72ba4c9bd591196a70cf5829bc39ff5360
+vendor/firmware/featenabler.b06|04aa1d29e38148de2ae866b637c61d9cab0cd139
+vendor/firmware/featenabler.b07|23dfcae1d5eac1406eb9d2f5947dc28fa0b521d1
+vendor/firmware/featenabler.mdt|9a10f17ff59e4fce01d17e82234f85699a20f5de
+
 # Fido
 vendor/bin/fidoca
 vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-service.rc
