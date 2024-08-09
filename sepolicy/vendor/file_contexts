@@ -76,6 +76,9 @@
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                             u:object_r:persist_subsys_file:s0
 
+# Power HAL
+/sys/devices/system/cpu(/.*)?                                                u:object_r:sysfs_devices_system_cpu:s0
+
 # Powershare
 /vendor/bin/hw/vendor\.lineage\.powershare@1\.0-service\.xiaomi              u:object_r:hal_lineage_powershare_default_exec:s0
 

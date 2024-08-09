@@ -6,6 +6,8 @@ type otrp_data_file, file_type, data_file_type;
 
 type persist_subsys_file, vendor_persist_type, file_type;
 
+type proc_kernel_sched, fs_type, proc_type;
+
 type proc_last_kmsg, fs_type, proc_type;
 
 type sla_data_file, file_type, data_file_type;
