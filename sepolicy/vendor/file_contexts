@@ -14,7 +14,7 @@
 # Devices
 /dev/elliptic(.*)?                                                           u:object_r:sound_device:s0
 /dev/goodix_fp                                                               u:object_r:fingerprint_device:s0
-/dev/ir_spi                                                                  u:object_r:vendor_ir_spi_device:s0
+/dev/ir_spi                                                                  u:object_r:lirc_device:s0
 /dev/mius(.*)?                                                               u:object_r:sound_device:s0
 /dev/sr100                                                                   u:object_r:vendor_uwb_device:s0
 /dev/xlog                                                                    u:object_r:sound_device:s0
@@ -63,6 +63,10 @@
 /sys/block/mmcblk0rpmb/bdi/read_ahead_kb                                     u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices(/.*)?/block/(dm-|mmcblk|sd)[a-z0-9]+/queue/read_ahead_kb        u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices/virtual/block/dm-[a-z0-9]+/queue/read_ahead_kb                  u:object_r:vendor_sysfs_mmc_host:s0
+
+# IR
+/dev/lirc[0-9]+                                                    u:object_r:lirc_device:s0
+/vendor/bin/hw/android\.hardware\.ir-service\.xiaomi               u:object_r:hal_ir_default_exec:s0
 
 # Misys
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@1\.0-service                  u:object_r:hal_misys_default_exec:s0

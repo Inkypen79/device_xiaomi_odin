@@ -4,6 +4,4 @@ type fingerprint_device, dev_type;
 
 type sound_device, dev_type;
 
-type vendor_ir_spi_device, dev_type;
-
 type vendor_uwb_device, dev_type;
