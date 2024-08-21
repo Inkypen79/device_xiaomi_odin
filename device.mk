@@ -319,7 +319,6 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
     CarrierConfigResOdin \
-    DeviceAsWebcamResOdin \
     FrameworksResOdin \
     SettingsProviderResOdin \
     SettingsResOdin \
