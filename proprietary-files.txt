@@ -1,4 +1,4 @@
-# These proprietary files are extracted from Xiaomi MIX 4 (odin) Android 14 HyperOS V1.0.3.0.UKMCNXM, unless pinned
+# These proprietary files are extracted from Xiaomi MIX 4 (odin) Android 14 HyperOS V1.0.4.0.UKMCNXM, unless pinned
 
 # ADSP
 vendor/bin/adsprpcd

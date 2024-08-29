@@ -230,7 +230,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_SCREEN_DENSITY := 440
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2024-06-01
+VENDOR_SECURITY_PATCH := 2024-08-01
 
 # Sepolicy
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
