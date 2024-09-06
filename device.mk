@@ -212,7 +212,10 @@ PRODUCT_PACKAGES += \
 # HIDL
 $(foreach target, $(shell cat $(LOCAL_PATH)/vndk.txt), $(eval PRODUCT_PACKAGES += $(target).vendor))
 
+PRODUCT_HIDL_ENABLED := true
+
 PRODUCT_PACKAGES += \
+    hwservicemanager \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
