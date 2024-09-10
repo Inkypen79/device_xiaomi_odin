@@ -71,6 +71,10 @@ function blob_fixup() {
         vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml)
             sed -i 's/system/system_ext/g' "${2}"
             ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy)
+            [ "$2" = "" ] && return 0
+            echo 'gettid: 1' >> ${2}
+            ;;
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
             sed -ni '/ozoaudio/!p' "${2}"
             sed -ni '/dolby/!p' "${2}"
