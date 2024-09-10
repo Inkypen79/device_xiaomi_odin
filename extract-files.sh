@@ -88,6 +88,9 @@ function blob_fixup() {
         vendor/lib64/libwa_sat.so)
             sed -i 's/\/system\/lib64\([^\/]\)/\/vendor\/lib64\1/g' "${2}"
             ;;
+        vendor/lib64/libwvhidl.so)
+            grep -q libcrypto_shim.so "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so)
             hexdump -ve '1/1 "%.2X"' "${2}" | sed "s/7C000094881640F9/1F2003D5881640F9/g" | xxd -r -p > "${EXTRACT_TMP_DIR}/${1##*/}"
             mv "${EXTRACT_TMP_DIR}/${1##*/}" "${2}"
