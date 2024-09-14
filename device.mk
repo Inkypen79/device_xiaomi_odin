@@ -44,32 +44,22 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
-    audio.primary.lahaina \
     audio.r_submix.default \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
     audioadsprpcd \
-    liba2dpoffload \
     libaudiopreprocessing \
     libaudio-resampler \
-    libbatterylistener \
     libbundlewrapper \
-    libcirrusspkrprot \
-    libcomprcapture \
     libdownmix \
     libdynproc \
     libeffectproxy \
-    libexthwplugin \
-    libhdmiedid \
-    libhfp \
     libldnhncr \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libreverbwrapper \
-    libsndmonitor \
-    libspkrprot \
     libtinycompress \
     libvisualizer \
     libvolumelistener
