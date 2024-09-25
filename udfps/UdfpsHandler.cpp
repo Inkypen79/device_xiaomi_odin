@@ -113,7 +113,7 @@ class XiaomiUdfpsHander : public UdfpsHandler {
     }
 
     void onFingerUp() {
-        // nothing
+        set(FOD_STATUS_PATH, FOD_STATUS_OFF);
     }
 
     void onAcquired(int32_t result, int32_t vendorCode) {
