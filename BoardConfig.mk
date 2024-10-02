@@ -107,6 +107,12 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
+# Fingerprint
+$(call soong_config_set, BIOMETRIC_XIAOMI, UDFPS_LOCATION_X, 540)
+$(call soong_config_set, BIOMETRIC_XIAOMI, UDFPS_LOCATION_Y, 1800)
+$(call soong_config_set, BIOMETRIC_XIAOMI, UDFPS_RADIUS, 100)
+$(call soong_config_set, BIOMETRIC_XIAOMI, USES_UDFPS_SENSOR, true)
+
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/fod.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/vintf/lineage.xml
