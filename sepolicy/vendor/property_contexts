@@ -15,6 +15,7 @@ persist.vendor.trigger.cct                  u:object_r:vendor_cct_prop:s0
 persist.vendor.fastchg_enabled              u:object_r:vendor_fastcharge_prop:s0
 
 # Fingerprint
+persist.vendor.fingerprint.                 u:object_r:vendor_fp_prop:s0
 persist.vendor.fpc.                         u:object_r:vendor_fp_prop:s0
 persist.vendor.goodix.                      u:object_r:vendor_fp_prop:s0
 persist.vendor.sys.fp.                      u:object_r:vendor_fp_prop:s0

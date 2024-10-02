@@ -149,3 +149,8 @@ persist.vendor.night.charge=true
 persist.sys.fuse.passthrough.enable=true
 # nokia audio room for vts
 #persist.vendor.audio.ozo.codec.enable=true
+
+# Fingerprint
+persist.vendor.fingerprint.type=udfps_optical
+persist.vendor.fingerprint.sensor_location=540|1800|100
+persist.vendor.fingerprint.sensor_modules=goodix_fod
