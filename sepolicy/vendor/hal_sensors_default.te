@@ -21,3 +21,6 @@ allow hal_sensors_default vendor_sysfs_touch:file rw_file_perms;
 
 # Allow Sensors hal to read and write to fod sysfs
 allow hal_sensors_default vendor_sysfs_fod:file rw_file_perms;
+
+# Allow Sensors hal to register callback
+binder_call(hal_sensors_default system_server)
