@@ -765,3 +765,6 @@ persist.vendor.recovery_update=false
 
 # Silence minksocket logs
 persist.log.tag.minksocket=S
+
+# Sensors
+ro.vendor.sensors.xiaomi.udfps=true
