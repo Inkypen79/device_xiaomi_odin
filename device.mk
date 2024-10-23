@@ -342,7 +342,7 @@ PRODUCT_PACKAGES += \
 
 # Powershare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.xiaomi
+    vendor.lineage.powershare@1.0-service.default
 
 # Protobuf
 PRODUCT_PACKAGES += \

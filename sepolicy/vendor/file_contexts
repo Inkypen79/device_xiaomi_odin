@@ -79,9 +79,6 @@
 # Power HAL
 /sys/devices/system/cpu(/.*)?                                                u:object_r:sysfs_devices_system_cpu:s0
 
-# Powershare
-/vendor/bin/hw/vendor\.lineage\.powershare@1\.0-service\.xiaomi              u:object_r:hal_lineage_powershare_default_exec:s0
-
 # Sensors
 /vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal                                                          u:object_r:hal_sensors_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.citsensorservice@1\.1-service                                                      u:object_r:hal_citsensorservice_xiaomi_default_exec:s0
