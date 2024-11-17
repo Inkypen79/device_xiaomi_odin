@@ -2699,7 +2699,6 @@ vendor/etc/init/dpmQmiMgr.rc
 vendor/etc/init/exfat.rc
 vendor/etc/init/ffu.rc
 vendor/etc/init/hw/init.qcom.factory.rc
-vendor/etc/init/hw/init.qcom.usb.rc
 vendor/etc/init/hw/init.qti.kernel.rc
 vendor/etc/init/init.qti.fm.rc
 vendor/etc/init/imsdaemon.rc
