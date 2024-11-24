@@ -1,0 +1,3 @@
+allow vendor_hal_usb_qti functionfs:dir { watch watch_reads };
+allow vendor_hal_usb_qti vendor_sysfs_usb_controller:dir search;
+allow vendor_hal_usb_qti vendor_sysfs_usb_controller:file { getattr open read };
