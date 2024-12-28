@@ -6,6 +6,7 @@
 
 #define LOG_TAG "UdfpsHandler.xiaomi_sm8350"
 
+#include <aidl/android/hardware/biometrics/fingerprint/BnFingerprint.h>
 #include <android-base/logging.h>
 
 #include <fcntl.h>
@@ -34,6 +35,8 @@
 #define COMMAND_FOD_PRESS_STATUS 1
 #define PARAM_FOD_PRESSED 1
 #define PARAM_FOD_RELEASED 0
+
+using ::aidl::android::hardware::biometrics::fingerprint::AcquiredInfo;
 
 template <typename T>
 static void set(const std::string& path, const T& value) {
@@ -117,7 +120,7 @@ class XiaomiUdfpsHander : public UdfpsHandler {
     }
 
     void onAcquired(int32_t result, int32_t vendorCode) {
-        if (result == FINGERPRINT_ACQUIRED_GOOD) {
+        if (static_cast<AcquiredInfo>(result) == AcquiredInfo::GOOD) {
             set(FOD_HBM_PATH, FOD_HBM_OFF);
             set(FOD_STATUS_PATH, FOD_STATUS_OFF);
         } else if (vendorCode == 21) {
