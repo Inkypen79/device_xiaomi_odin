@@ -66,7 +66,7 @@ function blob_fixup() {
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
         vendor/etc/media_codecs.xml|vendor/etc/media_codecs_lahaina.xml|vendor/etc/media_codecs_system_default_lahaina.xml)
-            sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony|vendor_audio)/d" "${2}"
+            sed -Ei "/media_codecs_(c2_audio|google_audio|google_c2|google_telephony|vendor_audio)/d" "${2}"
             sed -i '/<Settings>/a\        \<Domain name="telephony" enabled="true" />' "${2}"
             ;;
         vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml)
