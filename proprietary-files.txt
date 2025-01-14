@@ -350,7 +350,7 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # Camera
 -system_ext/framework/camerax-vendor-extensions.jar
-system_ext/lib64/libcamera_algoup_jni.xiaomi.so
+system_ext/lib64/libcamera_algoup_jni.xiaomi.so|9b7783a3da40b0e8515bf7e2712af53406328889
 system_ext/lib64/libcamera_mianode_jni.xiaomi.so
 system_ext/lib64/libmicampostproc_client.so
 system_ext/lib64/vendor.xiaomi.hardware.campostproc@1.0.so
