@@ -764,6 +764,10 @@ vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/libtzdrmgenprov.so
 
+# DRM - from from MIUI V13.0.6.0.SGHCNXM
+vendor/lib64/libStDrvInt.so|6091f1f496b87730f9a77e9ede504c4fa99c608a
+vendor/lib64/libsecureui.so|95177ed547c9fd85d410bd9d505582cabc80fb1e
+
 # DRM-HDCP
 vendor/bin/hdcp1prov
 vendor/bin/hdcp2p2prov
