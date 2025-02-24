@@ -70,9 +70,6 @@
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@3\.0-service                  u:object_r:hal_misys_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@4\.0-service                  u:object_r:hal_misys_default_exec:s0
 
-# NFC
-/vendor/bin/hw/android\.hardware\.nfc-service\.nxp                           u:object_r:hal_nfc_default_exec:s0
-
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                             u:object_r:persist_subsys_file:s0
 
