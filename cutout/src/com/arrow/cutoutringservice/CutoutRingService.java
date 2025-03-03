@@ -129,6 +129,7 @@ public class CutoutRingService extends BroadcastReceiver {
             @Override
             public void onFixedRotationStarted(int displayId, int newRotation) {
                 mFixedRotationInProgress = true;
+				Log.i(TAG, String.format("new rotation: %d", newRotation));
                 Handler.getMain().postAtFrontOfQueue(() -> setVisibility(HIDDEN));
             }
 
@@ -245,9 +246,18 @@ public class CutoutRingService extends BroadcastReceiver {
     }
 
     private void onRotationChanged() {
+        // Log immediate rotation state
+        int immediateRotation = getRotation();
+        Log.i(TAG, "Immediate rotation state: " + immediateRotation);
         adjustParamsToRotation();
-        Handler.getMain().postAtFrontOfQueue(() -> {
+        mWindowManager.updateViewLayout(mRingView, mRingParams);
+        
+        // Post a delayed check to log the state after a short delay
+        Handler.getMain().postDelayed(() -> {
+            int delayedRotation = getRotation();
+            Log.i(TAG, "Delayed rotation state: " + delayedRotation);
+            adjustParamsToRotation();
             mWindowManager.updateViewLayout(mRingView, mRingParams);
-        });
+        }, 1000);
     }
 }
