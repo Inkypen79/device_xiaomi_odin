@@ -133,10 +133,9 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=1 LLVM_IAS=1
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r536225
+TARGET_KERNEL_CLANG_VERSION := r530567
 TARGET_KERNEL_CONFIG := odin_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/odin
-KERNEL_CC := CC=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)/bin/clang
 BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
