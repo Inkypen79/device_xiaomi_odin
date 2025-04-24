@@ -295,7 +295,7 @@ PRODUCT_PACKAGES += \
 
 # Powershare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.default
+    vendor.lineage.powershare-service.default
 
 $(call soong_config_set,lineage_powershare,powershare_path,/sys/class/qcom-battery/reverse_chg_mode)
 
