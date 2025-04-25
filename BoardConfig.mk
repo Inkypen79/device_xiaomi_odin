@@ -201,7 +201,7 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 TARGET_BOARD_PLATFORM := lahaina
 
 # PowerShare
-TARGET_POWERSHARE_PATH := /sys/class/qcom-battery/reverse_chg_mode
+$(call soong_config_set,lineage_powershare,powershare_path,/sys/class/qcom-battery/reverse_chg_mode)
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
