@@ -93,7 +93,7 @@ function blob_fixup() {
         vendor/lib64/libwa_sat.so)
             sed -i 's/\/system\/lib64\([^\/]\)/\/vendor\/lib64\1/g' "${2}"
             ;;
-        vendor/lib64/libwvhidl.so)
+        vendor/lib64/libwvhidl.so|vendor/lib64/mediadrm/libwvdrmengine.so)
             grep -q libcrypto_shim.so "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;
         vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so)
