@@ -597,10 +597,10 @@ vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libtriplecam_optical_zoom_control.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libvidhance.so
-vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
+#vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.device@3.5.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so
+#vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0-impl.so
 vendor/lib64/vendor.xiaomi.hardware.cameraperf@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.campostproc@1.0-service-impl.so
@@ -1955,6 +1955,11 @@ vendor/lib64/vendor.xiaomi.hardware.tidaservice@1.2.so
 # Misc
 system/etc/public.libraries-qti.txt
 system/etc/public.libraries-xiaomi.txt
+system/lib64/vendor.qti.hardware.secureprocessor.common-V1-ndk.so:system_ext/lib64/vendor.qti.hardware.secureprocessor.common-V1-ndk.so
+system/lib64/vendor.qti.hardware.secureprocessor.common-helper.so:system_ext/lib64/vendor.qti.hardware.secureprocessor.common-helper.so
+system/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so:system_ext/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
+system/lib64/vendor.qti.hardware.secureprocessor.config-V1-ndk.so:system_ext/lib64/vendor.qti.hardware.secureprocessor.config-V1-ndk.so
+system/lib64/vendor.qti.hardware.secureprocessor.device-V1-ndk.so:system_ext/lib64/vendor.qti.hardware.secureprocessor.device-V1-ndk.so
 product/etc/permissions/com.qti.snapdragon.sdk.display.xml
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 product/etc/public.libraries-qti.txt
@@ -2166,7 +2171,7 @@ system_ext/lib/libhidconverter.so
 system_ext/lib/libhoaeffects.qti.so
 system_ext/lib/libhoaeffects_csim.so
 system_ext/lib/libHPFilter_recpp.so
-system_ext/lib/libhwuiinsptrdl.so
+#system_ext/lib/libhwuiinsptrdl.so
 system_ext/lib/libinstalldimpl.so
 system_ext/lib/libLimiter_recpp.so
 system_ext/lib/liblistenjni.qti.so
@@ -2174,7 +2179,7 @@ system_ext/lib/liblistensoundmodel2.qti.so
 system_ext/lib/libloc2jnibridge.so
 system_ext/lib/liblogdimpl.so
 system_ext/lib/liblsmclient.so
-system_ext/lib/libmediastub.so
+#system_ext/lib/libmediastub.so
 system_ext/lib/libmillet_comm.so
 system_ext/lib/libmodemenhance_aidl_client.so
 system_ext/lib/libmonitortrack.so
@@ -2184,7 +2189,7 @@ system_ext/lib/liboctvm_drv.so
 system_ext/lib/liboctvm_runtime.so
 system_ext/lib/liboctvm_utils.so
 system_ext/lib/liboemaids_system.so
-system_ext/lib/liboemnetdimpl.so
+#system_ext/lib/liboemnetdimpl.so
 system_ext/lib/libopencl-camera.so
 system_ext/lib/libOpenCL_system.so
 system_ext/lib/libperf_ctl.so
@@ -2257,7 +2262,7 @@ system_ext/lib64/libhoaeffects.qti.so
 system_ext/lib64/libhoaeffects_csim.so
 system_ext/lib64/libhook.so
 system_ext/lib64/libHPFilter_recpp.so
-system_ext/lib64/libhwuiinsptrdl.so
+#system_ext/lib64/libhwuiinsptrdl.so
 system_ext/lib64/libinstalldimpl.so
 system_ext/lib64/libjlspeex.so
 system_ext/lib64/libjnihelpers.so
@@ -2270,7 +2275,7 @@ system_ext/lib64/liblogdimpl.so
 system_ext/lib64/liblsmclient.so
 system_ext/lib64/libmalldisp.so
 system_ext/lib64/libmediasp_jni.so
-system_ext/lib64/libmediastub.so
+#system_ext/lib64/libmediastub.so
 system_ext/lib64/libmillet_comm.so
 system_ext/lib64/libmink-sock-native-api.so
 system_ext/lib64/libminksocket_system.so
@@ -2291,7 +2296,7 @@ system_ext/lib64/liboctvm_drv.so
 system_ext/lib64/liboctvm_runtime.so
 system_ext/lib64/liboctvm_utils.so
 system_ext/lib64/liboemaids_system.so
-system_ext/lib64/liboemnetdimpl.so
+#system_ext/lib64/liboemnetdimpl.so
 system_ext/lib64/libopencl-camera.so
 system_ext/lib64/libOpenCL_system.so
 system_ext/lib64/libperf_ctl.so
@@ -2309,7 +2314,7 @@ system_ext/lib64/libqmi_encdec_system.so
 system_ext/lib64/libQOC.qti.so
 system_ext/lib64/libQSEEComAPI_system.so
 system_ext/lib64/libQTEEConnector_system.so
-system_ext/lib64/libqxrsplitauxservice.qti.so
+#system_ext/lib64/libqxrsplitauxservice.qti.so
 system_ext/lib64/librecpp_intf.so
 system_ext/lib64/libsavior.so
 system_ext/lib64/libscout.so
@@ -2457,7 +2462,6 @@ vendor/bin/init.qti.media.sh
 vendor/bin/init.qti.qcv.sh
 vendor/bin/ipacm-diag
 vendor/bin/iperf
-vendor/bin/iperf3
 vendor/bin/iwconfig
 vendor/bin/iwlist
 vendor/bin/KmInstallKeybox
@@ -3003,7 +3007,7 @@ vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.qconfig@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so;MODULE_SUFFIX=_vendor
