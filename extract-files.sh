@@ -89,6 +89,10 @@ function blob_fixup() {
             ;;
         vendor/lib64/hw/com.qti.chi.override.so)
             sed -i 's/\/system\/lib64\/libion.so/\/vendor\/lib64\/libion.so/g' "${2}"
+            grep -q libprocessgroup_shim.so "${2}" || "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
+            ;;
+        system_ext/lib64/libcameraopt.so|vendor/lib64/libmialgoengine.so|vendor/lib64/hw/camera.qcom.so)
+            grep -q libprocessgroup_shim.so "${2}" || "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
             ;;
         vendor/lib64/libwa_sat.so)
             sed -i 's/\/system\/lib64\([^\/]\)/\/vendor\/lib64\1/g' "${2}"
