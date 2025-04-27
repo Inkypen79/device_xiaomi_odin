@@ -15,3 +15,31 @@ install_symlink {
     installed_location: "firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini",
     symlink_target: "/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_wificfr_interface",
+    interfaces: [
+        "vendor.qti.hardware.wifi.wificfr@1.0::IWificfr",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_wifilearner_interface",
+    interfaces: [
+        "vendor.qti.hardware.wifi.wifilearner@1.0::IWifiStats",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_cameraperf_interface",
+    interfaces: [
+        "vendor.xiaomi.hardware.cameraperf@1.0::IMiCameraPerfService",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_campostproc_interface",
+    interfaces: [
+        "vendor.xiaomi.hardware.campostproc@1.0::IMiPostProcService",
+    ],
+}
