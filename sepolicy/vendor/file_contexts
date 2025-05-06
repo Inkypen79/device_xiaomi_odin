@@ -64,10 +64,6 @@
 /sys/devices(/.*)?/block/(dm-|mmcblk|sd)[a-z0-9]+/queue/read_ahead_kb        u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices/virtual/block/dm-[a-z0-9]+/queue/read_ahead_kb                  u:object_r:vendor_sysfs_mmc_host:s0
 
-# IR
-/dev/lirc[0-9]+                                                    u:object_r:lirc_device:s0
-/vendor/bin/hw/android\.hardware\.ir-service\.xiaomi               u:object_r:hal_ir_default_exec:s0
-
 # Misys
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@1\.0-service                  u:object_r:hal_misys_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.misys@2\.0-service                  u:object_r:hal_misys_default_exec:s0
