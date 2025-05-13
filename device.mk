@@ -310,6 +310,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     fstab.qcom \
+    fstab.qcom.ramdisk \
     ueventd.qcom.rc
 
 # Sensors
