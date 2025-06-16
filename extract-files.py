@@ -119,6 +119,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()
         .regex_replace('.*ozoaudio.*\n?', '')
         .regex_replace('.*dolby.*\n?', ''),
+    ('vendor/lib/hw/audio.primary.lahaina.so', 'vendor/lib/libaudioroute_ext.so'): blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'),
     ('vendor/lib64/hw/camera.qcom.so', 'vendor/lib64/libmialgoengine.so'): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     'vendor/lib64/hw/camera.xiaomi.so': blob_fixup()
