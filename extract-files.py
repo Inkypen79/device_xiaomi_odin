@@ -105,6 +105,8 @@ blob_fixups: blob_fixups_user_type = {
     ('system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml', 'system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml', 'system_ext/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml'): blob_fixup()
         .regex_replace('system/product', 'system_ext')
         .regex_replace('xml version="2.0"', 'xml version="1.0"'),
+    'system_ext/lib64/libsystemhelper_jni.so': blob_fixup()
+        .add_needed('libgui_shim.so'),
     'vendor/etc/camera/odin_motiontuning.xml': blob_fixup()
         .regex_replace('xml=version', 'xml version'),
     'vendor/etc/camera/pureShot_parameter.xml': blob_fixup()
