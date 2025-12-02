@@ -28,7 +28,8 @@
 
     <application
         android:label="@string/device_settings_app_name"
-        android:persistent="true">
+        android:persistent="true"
+        android:theme="@style/Theme.SubSettingsBase.Expressive">
 
         <receiver android:name=".BootCompletedReceiver"
                   android:exported="true">
@@ -58,8 +59,7 @@
         <activity
             android:name=".doze.DozeSettingsActivity"
             android:exported="true"
-            android:label="@string/ambient_display_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/ambient_display_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -71,8 +71,7 @@
         <activity
             android:name=".display.DcDimmingSettingsActivity"
             android:exported="true"
-            android:label="@string/dc_dimming_enable_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:label="@string/dc_dimming_enable_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
