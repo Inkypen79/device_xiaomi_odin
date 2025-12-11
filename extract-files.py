@@ -107,6 +107,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('xml version="2.0"', 'xml version="1.0"'),
     'system_ext/lib64/libsystemhelper_jni.so': blob_fixup()
         .add_needed('libgui_shim.so'),
+    'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so': blob_fixup()
+        .replace_needed ('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
     'system_ext/lib64/vendor.qti.hardware.qxr-V1-ndk_platform.so': blob_fixup()
         .replace_needed('android.hardware.common-V2-ndk_platform.so', 'android.hardware.common-V2-ndk.so'),
     'vendor/etc/camera/odin_motiontuning.xml': blob_fixup()
