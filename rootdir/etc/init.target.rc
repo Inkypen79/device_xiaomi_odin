@@ -227,9 +227,8 @@ on boot
     mkdir /data/vendor 0777 system system
     mkdir /data/vendor/uwb 0777 system system
     mkdir /data/vendor/uwb/param 0777 system system
-    chmod 0660 /dev/sr100
-    chown system system /dev/sr100
-    symlink /dev/sr100 /dev/srxxx
+    chmod 0660 /dev/srxxx
+    chown system system /dev/srxxx
 
     # Fingerprint sensor permissions
     chown system system /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/fod_ui
