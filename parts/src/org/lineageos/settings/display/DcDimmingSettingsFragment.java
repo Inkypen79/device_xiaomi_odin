@@ -22,16 +22,15 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
-
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
-public class DcDimmingSettingsFragment extends PreferenceFragmentCompat implements
-        OnPreferenceChangeListener {
-
+public class DcDimmingSettingsFragment
+        extends PreferenceFragmentCompat implements OnPreferenceChangeListener {
     private SwitchPreferenceCompat mDcDimmingPreference;
     private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
-    private static final String DC_DIMMING_NODE = "/sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param";
+    private static final String DC_DIMMING_NODE =
+            "/sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -49,9 +48,8 @@ public class DcDimmingSettingsFragment extends PreferenceFragmentCompat implemen
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (DC_DIMMING_ENABLE_KEY.equals(preference.getKey())) {
-            FileUtils.writeLine(DC_DIMMING_NODE, (Boolean) newValue ? "08 01":"08 00");
+            FileUtils.writeLine(DC_DIMMING_NODE, (Boolean) newValue ? "08 01" : "08 00");
         }
         return true;
     }
-
 }

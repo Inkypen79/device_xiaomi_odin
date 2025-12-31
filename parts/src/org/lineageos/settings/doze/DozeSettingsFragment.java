@@ -22,7 +22,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -30,15 +29,12 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
-
 import com.android.settingslib.widget.MainSwitchPreference;
-
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
-public class DozeSettingsFragment extends PreferenceFragmentCompat
-        implements OnPreferenceChangeListener {
-
+public class DozeSettingsFragment
+        extends PreferenceFragmentCompat implements OnPreferenceChangeListener {
     private SwitchPreferenceCompat mAlwaysOnDisplayPreference;
     private ListPreference mDozeBrightnessPreference;
     private SwitchPreferenceCompat mWakeOnGesturePreference;
@@ -62,7 +58,8 @@ public class DozeSettingsFragment extends PreferenceFragmentCompat
         switchBar.setOnPreferenceChangeListener(this);
         switchBar.setChecked(dozeEnabled);
 
-        mAlwaysOnDisplayPreference = (SwitchPreferenceCompat) findPreference(DozeUtils.ALWAYS_ON_DISPLAY);
+        mAlwaysOnDisplayPreference =
+                (SwitchPreferenceCompat) findPreference(DozeUtils.ALWAYS_ON_DISPLAY);
         mAlwaysOnDisplayPreference.setEnabled(dozeEnabled);
         mAlwaysOnDisplayPreference.setChecked(DozeUtils.isAlwaysOnEnabled(getActivity()));
         mAlwaysOnDisplayPreference.setOnPreferenceChangeListener(this);
@@ -72,7 +69,8 @@ public class DozeSettingsFragment extends PreferenceFragmentCompat
                 dozeEnabled && DozeUtils.isAlwaysOnEnabled(getActivity()));
         mDozeBrightnessPreference.setOnPreferenceChangeListener(this);
 
-        mWakeOnGesturePreference = (SwitchPreferenceCompat) findPreference(DozeUtils.WAKE_ON_GESTURE_KEY);
+        mWakeOnGesturePreference =
+                (SwitchPreferenceCompat) findPreference(DozeUtils.WAKE_ON_GESTURE_KEY);
         mWakeOnGesturePreference.setEnabled(dozeEnabled);
         mWakeOnGesturePreference.setOnPreferenceChangeListener(this);
 
@@ -142,18 +140,19 @@ public class DozeSettingsFragment extends PreferenceFragmentCompat
 
     private void showHelp() {
         AlertDialog helpDialog = new AlertDialog.Builder(getActivity())
-                .setTitle(R.string.doze_settings_help_title)
-                .setMessage(R.string.doze_settings_help_text)
-                .setPositiveButton(R.string.dialog_ok,
-                        (dialog, which) -> {
-                            getActivity()
-                                    .getSharedPreferences("doze_settings", Activity.MODE_PRIVATE)
-                                    .edit()
-                                    .putBoolean("first_help_shown", true)
-                                    .commit();
-                            dialog.cancel();
-                        })
-                .create();
+                                         .setTitle(R.string.doze_settings_help_title)
+                                         .setMessage(R.string.doze_settings_help_text)
+                                         .setPositiveButton(R.string.dialog_ok,
+                                                 (dialog, which) -> {
+                                                     getActivity()
+                                                             .getSharedPreferences("doze_settings",
+                                                                     Activity.MODE_PRIVATE)
+                                                             .edit()
+                                                             .putBoolean("first_help_shown", true)
+                                                             .commit();
+                                                     dialog.cancel();
+                                                 })
+                                         .create();
         helpDialog.show();
     }
 }

@@ -23,13 +23,11 @@ import android.hardware.SensorManager;
 import android.hardware.TriggerEvent;
 import android.hardware.TriggerEventListener;
 import android.util.Log;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class PickupSensor {
-
     private static final boolean DEBUG = false;
     private static final String TAG = "PickupSensor";
 
@@ -50,9 +48,7 @@ public class PickupSensor {
     protected void enable() {
         if (DEBUG)
             Log.d(TAG, "Enabling");
-        submit(() -> {
-            mSensorManager.requestTriggerSensor(mPickupListener, mSensor);
-        });
+        submit(() -> { mSensorManager.requestTriggerSensor(mPickupListener, mSensor); });
     }
 
     protected void disable() {
@@ -64,7 +60,8 @@ public class PickupSensor {
     private TriggerEventListener mPickupListener = new TriggerEventListener() {
         @Override
         public void onTrigger(TriggerEvent event) {
-            if (DEBUG) Log.d(TAG, "Triggered");
+            if (DEBUG)
+                Log.d(TAG, "Triggered");
             DozeUtils.wakeOrLaunchDozePulse(mContext);
             enable();
         }

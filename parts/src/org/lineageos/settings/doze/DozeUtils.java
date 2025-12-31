@@ -34,7 +34,6 @@ import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceManager;
-
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
@@ -100,11 +99,11 @@ public final class DozeUtils {
     private static void enableScreenOffUdfpsByDefault(Context context) {
         try {
             Settings.Secure.getIntForUser(context.getContentResolver(), SCREEN_OFF_UDFPS_ENABLED,
-                UserHandle.USER_CURRENT);
+                    UserHandle.USER_CURRENT);
         } catch (SettingNotFoundException e) {
             Log.i(TAG, "Setting screen_off_udfps_enabled to 1 by default.");
-            Settings.Secure.putIntForUser(context.getContentResolver(), SCREEN_OFF_UDFPS_ENABLED,
-                1, UserHandle.USER_CURRENT);
+            Settings.Secure.putIntForUser(context.getContentResolver(), SCREEN_OFF_UDFPS_ENABLED, 1,
+                    UserHandle.USER_CURRENT);
         }
     }
 
