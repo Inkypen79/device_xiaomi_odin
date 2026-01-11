@@ -2168,20 +2168,17 @@ system_ext/lib64/libadvanced_crypto_jni.so
 system_ext/lib64/libAGC_recpp.so
 system_ext/lib64/libaivsopus.so
 system_ext/lib64/libANS_recpp.so
-system_ext/lib64/libbacktrace.so
 system_ext/lib64/libbarrage_utils.so
 system_ext/lib64/libbinauralrenderer_wrapper.qti.so
 system_ext/lib64/libboost.so
 system_ext/lib64/libbt-logClient.so
 system_ext/lib64/libbtconfigstore.so
-system_ext/lib64/libcallstack.so
 system_ext/lib64/libCastSdk-jni.so
 system_ext/lib64/libclientinfoimpl.so
 system_ext/lib64/libCompressor_recpp.so
 system_ext/lib64/libcrop.so
 system_ext/lib64/libdashdatasource.so
 system_ext/lib64/libdashsamplesource.so
-system_ext/lib64/libdehijack.so
 system_ext/lib64/libDiagService.so
 system_ext/lib64/libdiag_system.qti.so
 system_ext/lib64/libembmsmmosal.so
@@ -2200,7 +2197,6 @@ system_ext/lib64/libHDR_recpp.so
 system_ext/lib64/libhidconverter.so
 system_ext/lib64/libhoaeffects.qti.so
 system_ext/lib64/libhoaeffects_csim.so
-system_ext/lib64/libhook.so
 system_ext/lib64/libHPFilter_recpp.so
 #system_ext/lib64/libhwuiinsptrdl.so
 system_ext/lib64/libinstalldimpl.so
@@ -2268,8 +2264,6 @@ system_ext/lib64/libsystemhelper_jni.so
 system_ext/lib64/libtfa98xx_cal.so
 system_ext/lib64/libtfa98xx_cal_tfa9873.so
 system_ext/lib64/libthermalclient.qti.so
-system_ext/lib64/libtrack-heap.so
-system_ext/lib64/libtrack-uaf.so
 system_ext/lib64/libvideocodeccapability.so
 system_ext/lib64/libvideoconfigimpl.so
 system_ext/lib64/libvirtualcamera_imageutils_jni.so
