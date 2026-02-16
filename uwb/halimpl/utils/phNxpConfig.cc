@@ -290,7 +290,7 @@ bool CUwbNxpConfig::readConfig()
                 base = 10;
                 numValue = getDigitValue(c, base);
             } else {
-                m_map.try_emplace(token, move(uwbParam(numValue)));
+                m_map.try_emplace(token, std::move(uwbParam(numValue)));
                 state = END_LINE;
             }
             break;
@@ -298,7 +298,7 @@ bool CUwbNxpConfig::readConfig()
             if (isDigit(c, base)) {
                 numValue *= base;
                 numValue += getDigitValue(c, base);
-            } else {m_map.try_emplace(token, move(uwbParam(numValue)));
+            } else {m_map.try_emplace(token, std::move(uwbParam(numValue)));
                 state = END_LINE;
             }
             break;
@@ -307,7 +307,7 @@ bool CUwbNxpConfig::readConfig()
                 numValue = getDigitValue(c, base);
                 state = ARR_NUM;
             } else if (c == '}') {
-                m_map.try_emplace(token, move(uwbParam(move(arrValue))));
+                m_map.try_emplace(token, std::move(uwbParam(std::move(arrValue))));
                 state = END_LINE;
             } else if (c == '"') {
                 state = ARR_STR;
@@ -317,7 +317,7 @@ bool CUwbNxpConfig::readConfig()
             break;
         case ARR_STR:
             if (c == '"') {
-                arrStr.emplace_back(move(strValue));
+                arrStr.emplace_back(std::move(strValue));
                 strValue.clear();
                 state = ARR_STR_SPACE;
             } else {
@@ -326,7 +326,7 @@ bool CUwbNxpConfig::readConfig()
             break;
         case ARR_STR_SPACE:
             if (c == '}') {
-                m_map.try_emplace(token, move(uwbParam(move(arrStr))));
+                m_map.try_emplace(token, std::move(uwbParam(std::move(arrStr))));
                 state = END_LINE;
             } else if (c == '"') {
                 state = ARR_STR;
@@ -343,14 +343,14 @@ bool CUwbNxpConfig::readConfig()
                 state = END_LINE;
             }
             if (c == '}') {
-                m_map.try_emplace(token, move(uwbParam(move(arrValue))));
+                m_map.try_emplace(token, std::move(uwbParam(std::move(arrValue))));
                 state = END_LINE;
             }
             break;
         case STR_VALUE:
             if (c == '"') {
                 state = END_LINE;
-                m_map.try_emplace(token, move(uwbParam(strValue)));
+                m_map.try_emplace(token, std::move(uwbParam(strValue)));
             } else {
                 strValue.push_back(c);
             }
@@ -429,10 +429,10 @@ CUwbNxpConfig::CUwbNxpConfig(const char *filepath) :
 
 CUwbNxpConfig::CUwbNxpConfig(CUwbNxpConfig&& config)
 {
-    m_map = move(config.m_map);
+    m_map = std::move(config.m_map);
     mValidFile = config.mValidFile;
-    mFilePath = move(config.mFilePath);
-    mCurrentFile = move(config.mCurrentFile);
+    mFilePath = std::move(config.mFilePath);
+    mCurrentFile = std::move(config.mCurrentFile);
     mCountrySpecific = config.mCountrySpecific;
 
     config.mValidFile = false;
@@ -440,10 +440,10 @@ CUwbNxpConfig::CUwbNxpConfig(CUwbNxpConfig&& config)
 
 CUwbNxpConfig& CUwbNxpConfig::operator=(CUwbNxpConfig&& config)
 {
-    m_map = move(config.m_map);
+    m_map = std::move(config.m_map);
     mValidFile = config.mValidFile;
-    mFilePath = move(config.mFilePath);
-    mCurrentFile = move(config.mCurrentFile);
+    mFilePath = std::move(config.mFilePath);
+    mCurrentFile = std::move(config.mCurrentFile);
     mCountrySpecific = config.mCountrySpecific;
 
     config.mValidFile = false;
@@ -527,9 +527,9 @@ uwbParam::uwbParam(const uwbParam &param) :
 
 uwbParam::uwbParam(uwbParam &&param) :
     m_numValue(param.m_numValue),
-    m_str_value(move(param.m_str_value)),
-    m_arrValue(move(param.m_arrValue)),
-    m_arrStrValue(move(param.m_arrStrValue)),
+    m_str_value(std::move(param.m_str_value)),
+    m_arrValue(std::move(param.m_arrValue)),
+    m_arrStrValue(std::move(param.m_arrStrValue)),
     m_type(param.m_type)
 {
 }
@@ -548,13 +548,13 @@ uwbParam::uwbParam(unsigned long value) :
 }
 
 uwbParam::uwbParam(vector<uint8_t> &&value) :
-    m_arrValue(move(value)),
+    m_arrValue(std::move(value)),
     m_type(type::BYTEARRAY)
 {
 }
 
 uwbParam::uwbParam(vector<string> &&value) :
-    m_arrStrValue(move(value)),
+    m_arrStrValue(std::move(value)),
     m_type(type::STRINGARRAY)
 {
 }
@@ -603,16 +603,16 @@ public:
             unordered_set<string> cc_set;
             while (ss >> cc) {
               if (cc.length() == 2 && isupper(cc[0]) && isupper(cc[1])) {
-                cc_set.emplace(move(cc));
+                cc_set.emplace(std::move(cc));
               }
             }
-            auto result = m_map.try_emplace(region_str, move(cc_set));
+            auto result = m_map.try_emplace(region_str, std::move(cc_set));
             if (!result.second) {
               // region conlifct : merge
-              result.first->second.merge(move(cc_set));
+              result.first->second.merge(std::move(cc_set));
             }
         }
-        m_config = move(config);
+        m_config = std::move(config);
     }
     string xlateCountryCode(const char country_code[2]) {
         string code{country_code[0], country_code[1]};
@@ -708,7 +708,7 @@ void CascadeConfig::init(const char *main_config)
         ALOGW("Failed to load main config file");
         return;
     }
-    mMainConfig = move(config);
+    mMainConfig = std::move(config);
 
     {
         // UCI config file
@@ -720,7 +720,7 @@ void CascadeConfig::init(const char *main_config)
             ALOGW("Failed to load uci config file:%s",
                     uciConfigFilePath.c_str());
         } else {
-            mUciConfig = move(config);
+            mUciConfig = std::move(config);
         }
     }
 
@@ -734,7 +734,7 @@ void CascadeConfig::init(const char *main_config)
         CUwbNxpConfig config(param->str_value());
         ALOGD("Extra calibration file %s : %svalid", param->str_value(), config.isValid() ? "" : "in");
         if (config.isValid() || config.isCountrySpecific()) {
-            mExtraConfig.emplace_back(move(config));
+            mExtraConfig.emplace_back(std::move(config));
         }
     }
 
@@ -764,13 +764,13 @@ void CascadeConfig::init(const char *main_config)
             version = param ? atoi(param->str_value()) : -2;
             if (version > max_version) {
                 foundCapFile = true;
-                pickedConfig = move(config);
-                strPickedPath = move(strPath);
+                pickedConfig = std::move(config);
+                strPickedPath = std::move(strPath);
                 max_version = version;
             }
         }
         if (foundCapFile) {
-            mCapsConfig = move(pickedConfig);
+            mCapsConfig = std::move(pickedConfig);
             ALOGI("CountryCodeCaps file %s loaded with VERSION=%d", strPickedPath.c_str(), max_version);
         } else {
             ALOGI("No CountryCodeCaps specified");
