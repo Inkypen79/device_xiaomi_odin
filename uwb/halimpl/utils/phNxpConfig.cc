@@ -639,7 +639,7 @@ public:
             const auto &region_str = entry.first;
             const auto &cc_set = entry.second;
             stringstream ss;
-            for (const auto s : cc_set) {
+            for (const auto &s : cc_set) {
                 ss << "\"" << s << "\", ";
             }
             ALOGV("- %s = { %s}", region_str.c_str(), ss.str().c_str());
