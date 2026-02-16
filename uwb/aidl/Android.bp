@@ -52,9 +52,9 @@ cc_library_static {
         "uwb_chip.cpp",
     ],
     include_dirs: [
-        "hardware/nxp/uwb/extns/inc",
-        "hardware/nxp/uwb/halimpl/inc",
-        "hardware/nxp/uwb/halimpl/inc/common",
+        "device/xiaomi/odin/uwb/extns/inc",
+        "device/xiaomi/odin/uwb/halimpl/inc",
+        "device/xiaomi/odin/uwb/halimpl/inc/common",
     ],
     cflags: [
         "-Wall",
