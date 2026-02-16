@@ -60,5 +60,6 @@ cc_library_shared {
         "-Wno-deprecated-register",
         "-Wno-unused-parameter",
         "-Wno-missing-field-initializers",
+        "-Wno-unused-but-set-variable",
     ],
 }
