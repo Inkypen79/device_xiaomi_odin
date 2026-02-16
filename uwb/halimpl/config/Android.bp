@@ -1,0 +1,17 @@
+prebuilt_etc {
+    name: "libuwb-uci.conf",
+    src: "SR1XX/libuwb-uci.conf",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "libuwb-nxp.conf",
+    src: "SR1XX/libuwb-nxp.conf",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "libuwb-countrycode.conf",
+    src: "libuwb-countrycode.conf",
+    vendor: true,
+}

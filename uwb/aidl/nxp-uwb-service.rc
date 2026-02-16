@@ -1,0 +1,4 @@
+service vendor.uwb_hal /vendor/bin/hw/android.hardware.uwb-service.nxp
+    class hal
+    user uwb
+    group system
