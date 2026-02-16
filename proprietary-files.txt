@@ -1245,14 +1245,6 @@ vendor/etc/libnfc-nxp.conf
 vendor/etc/libnfc-nxp_RF.conf
 vendor/etc/libnfc-qrd-SN100.conf
 vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
-vendor/etc/libuwb-nxp-BLACK-iot.conf
-vendor/etc/libuwb-nxp-BLACK.conf
-vendor/etc/libuwb-nxp-GREY-iot.conf
-vendor/etc/libuwb-nxp-GREY.conf
-vendor/etc/libuwb-nxp-iot.conf
-vendor/etc/libuwb-nxp-WHITE-iot.conf
-vendor/etc/libuwb-nxp-WHITE.conf
-vendor/etc/libuwb-nxp.conf
 vendor/etc/sn100u_nfcon.pnscr
 vendor/lib64/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/jcos_nq_client.so
@@ -2532,7 +2524,6 @@ vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/init/vmmgr.rc
 vendor/etc/init/vppservice.rc
-vendor/etc/libuwb-uci.conf
 vendor/etc/mdss_dsi_k8_42_02_0a_dsc_cmd_mi.xml
 vendor/etc/media/video_system_specs.json
 vendor/etc/media_lahaina/video_system_specs.json
