@@ -1835,10 +1835,8 @@ vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 vendor/etc/wifi/fstman.ini
 vendor/etc/wifi/icm.conf
-vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/passpointProfile.conf
 vendor/etc/wifi/vendor_cmd.xml
-vendor/etc/wifi/wpa_supplicant_overlay.conf
 vendor/lib64/vendor.qti.hardware.wifi.wificfr@1.0.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
 
