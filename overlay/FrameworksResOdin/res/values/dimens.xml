@@ -12,4 +12,15 @@
          Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
          -->
     <dimen name="status_bar_height_portrait">@dimen/status_bar_height_default</dimen>
+
+    <!-- Radius of the software rounded corners. -->
+    <dimen name="rounded_corner_radius">75px</dimen>
+
+    <!-- Radius of the software rounded corners at the top of the display in its natural
+         orientation. -->
+    <dimen name="rounded_corner_radius_top">75px</dimen>
+
+    <!-- Radius of the software rounded corners at the bottom of the display in its natural
+         orientation. -->
+    <dimen name="rounded_corner_radius_bottom">75px</dimen>
 </resources>
